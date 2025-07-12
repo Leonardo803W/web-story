@@ -36,3 +36,289 @@
     transform: rotate(360deg);
   }
 }
+
+/*navbar*/
+
+#navbar{
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  align-items: center;
+  /*position: fixed;
+  z-index: 3;*/
+  width: 100%;
+  border-bottom: #E91E63 4px solid;
+  background-size: 426px 167px;
+  height: 6rem;
+}
+
+@media (min-width: 426px) {
+  #navbar{
+    background-size: 386px 167px;
+  }
+}
+
+@media (min-width: 769px) {
+  #navbar{
+    background-size: 342px 167px;
+  }
+}
+
+@media (min-width: 426px) {
+  #navbar{
+    background-size: 386px 167px;
+  }
+}
+
+#show-on-mobile {
+  display: block;
+  background: #ffffff99;
+  border-color: unset;
+}
+
+/* Media query per nascondere il pulsante sui desktop e mostrarlo sui dispositivi mobili */
+@media (min-width: 769px) {
+  #show-on-mobile {
+    display: none;
+  }
+}
+
+#title{
+    color: rgb(0 0 0);
+    margin: 0%;
+    background: #ffffff99;
+}
+
+#navbar-item-desktop{
+ display: none;
+}
+
+/* Media query per mostrare le sezioni della navbar su laptop e desktop */
+@media (min-width: 769px) {
+  #navbar-item-desktop{
+      display: flex;
+      background: #ffffff99;
+      align-items: center;
+  }
+
+  #navbar-item-desktop p{
+      margin: 0;
+      padding: 1rem;
+  }
+
+  #navbar-item-desktop p:hover{
+    background-color: red;
+  }
+
+  #navbar-item-desktop a{
+      color: black;
+      text-decoration: unset;
+  }
+}
+
+#navbar-profile{
+  background: #ffffff99;
+  border-color: unset;
+  padding: 1rem;
+}
+
+#profile-items{
+    position: absolute;
+    /*right: 2rem;
+    top: 5rem;*/
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    animation: list 0.5s ease-in-out;
+}
+
+@keyframes list {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/*Main*/
+
+.group-paragrafer{
+  opacity: 1;
+  transition: opacity 2s;
+  width: 100%;
+  height: 30rem;
+  padding-top: 1rem;
+  animation: GroupParagrafer 6s ease-out;
+  position: absolute;
+  z-index: 1;
+  background-color: black;
+  color: white;
+}
+
+#para1, #para2, #para3, #para4, #para5 {
+    margin: 0;
+    padding: 2rem;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0px 1px 4px;
+    font-weight: bold;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#group-img{
+  position: relative;
+  z-index: 2;
+  justify-content: space-around;
+  display: flex;
+  width: 100%;
+}
+
+#slide-img-sinistra{
+  width: 50%;
+  animation: slideImg 2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+#slide-img-destra{
+  align-items: flex-end;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+#slide-img-sinistra img{
+  width: 40%;
+  height: 15rem;
+  animation: slideImgSinistra 2s ease-in-out;
+}
+
+#slide-img-destra img{
+  width: 40%;
+  height: 15rem;
+  animation: slideImgDestra 2s ease-in-out;
+}
+
+@keyframes slideImgDestra {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+@keyframes slideImgSinistra {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+/*inizio style per le immagini in home*/
+
+#immagine1{
+
+}
+
+#immagine2{
+  transform: scaleY(-1);
+}
+
+#immagine3{
+  transform: scalex(-1);
+}
+
+#immagine4{
+  transform: scale(-1);
+}
+
+/*fine style per le immagini in home*/
+
+.HomeDivSinistra{
+  text-align: left;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #c5e1b2;
+  margin-top: 10rem;
+  display: flex
+;
+}
+
+.HomeDivDestra{
+  text-align: right;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #ff9f9f;
+  margin-top: 10rem;
+}
+
+.HomeDivParagrafiSinistra{
+  margin: 0;
+  padding: 3rem;
+  border-right: black 3px solid;
+}
+
+.HomeDivParagrafiDestra{
+  margin: 0;
+  padding-bottom: 2rem;
+  padding-left: 15rem;
+  padding-right: 2rem;
+}
+
+.HomeCaroselliItem{
+    box-shadow: 0px 0px 13px 3px;
+    border: #ffffff 1px solid;
+    padding: 2rem;
+    width: 90%;
+    background-color: white;
+    height: 15rem;
+}
+
+.HomeCaroselliItem h3{
+  margin: 0;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.HomeCaroselli{
+  border-top: #535353 1px solid;
+}
+
+.HomeCaroselliItem p{
+  margin: 0;
+  padding-top: 1rem;
+}
+
+.HomeAncore{
+  display: block;
+  border: #ffffff 1px solid;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+  color: black;
+  border-radius: 50px;
+}
+
+.HomeAncore:hover{
+  background-color: red;
+  box-shadow: 0px 0px 15px 1px;
+}

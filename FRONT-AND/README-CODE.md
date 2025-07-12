@@ -39,4 +39,5 @@ Scopo: Bootstrap è un framework CSS per lo sviluppo di siti web e applicazioni 
 Link Documentation: https://react-bootstrap.github.io
 Installazione: npm install react-bootstrap
 Scopo: React Bootstrap è una libreria che integra Bootstrap con React. Fornisce componenti Bootstrap come componenti React, facilitando l'uso di Bootstrap in applicazioni React.
-Esempio di Installazione Completa
+
+5. react-multi-carousel
