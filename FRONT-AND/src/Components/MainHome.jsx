@@ -5,6 +5,27 @@ import Carousel from 'react-bootstrap/Carousel';
 
 import img1 from '../img/immagine della via lattea.jpg'
 
+//imgB immagini delle battaglie
+import imgB1 from '../img/img (caroselli home)/battaglie/Battaglia di Hastings.jpeg'
+import imgB2 from '../img/img (caroselli home)/battaglie/Battaglia di Waterloo.jpg'
+import imgB3 from '../img/img (caroselli home)/battaglie/La Battaglia di Stalingrado.jpg'
+import imgB4 from '../img/img (caroselli home)/battaglie/Battaglia di Midway.jpg'
+import imgB5 from '../img/img (caroselli home)/battaglie/Battaglia di Lepanto.jpg'
+
+//imgI immagini delle invenzioni
+import imgI1 from '../img/img (caroselli home)/invenzioni/Invenzione della ruota.jpg'
+import imgI2 from '../img/img (caroselli home)/invenzioni/La stampa di Gutenberg.jpg'
+import imgI3 from "../img/img (caroselli home)/invenzioni/L'energia elettrica.jpeg"
+import imgI4 from '../img/img (caroselli home)/invenzioni/Il telefono di Bell.jpeg'
+import imgI5 from '../img/img (caroselli home)/invenzioni/Il motore a combustione interna.JPG'
+
+//imgE immagini delle epoche
+import imgE1 from '../img/img (caroselli home)/epoche/Epoca del Rinascimento.jpg'
+import imgE2 from '../img/img (caroselli home)/epoche/Età Industriale.jpeg'
+import imgE3 from '../img/img (caroselli home)/epoche/Era Digitale.jpg'
+import imgE4 from "../img/img (caroselli home)/epoche/Epoca dell'Antica Grecia.avif"
+import imgE5 from '../img/img (caroselli home)/epoche/Impero Romano.jpg'
+
 const MainHome = () => {
 
     // punti definiti per la quantita di card visualizzabili del carosello
@@ -83,7 +104,7 @@ const MainHome = () => {
             </section>
 
             <section>
-                <div className = 'HomeDivSinistra'>
+                <div id = 'HomeDiv1'>
                     <p className = "HomeDivParagrafiSinistra">
                         La storia dell'uomo è stata impregnata di battaglie ⚔️, spesso anche piccole battaglie possono decidere il destino di un paese. 
                         Ma certe battaglie hanno influenzato profondamente la storia che conosciamo 📜. 
@@ -93,55 +114,76 @@ const MainHome = () => {
                         </Link>
                     </p>
 
-                        <Carousel>
+                        <Carousel className = "HomeCaroselli">
                             <Carousel.Item>
-                                    <img src="https://placedog.net/500" alt="" />
+                                    <img src = {imgB1} alt="" />
 
                                 <Carousel.Caption>
                                     <h3>Battaglia di Hastings</h3>
                                     <p>La conquista normanna dell'Inghilterra nel 1066.</p>
+
+                                    <Link>
+                                        <a href = "#" className = "HomeAncore"> scopri </a>
+                                    </Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
 
                             <Carousel.Item>
-                                    <img src="https://placedog.net/500" alt="" />
+                                    <img src = {imgB2} alt="" />
 
                                 <Carousel.Caption>
                                     <h3>Battaglia di Waterloo</h3>
                                     <p>La sconfitta di Napoleone nel 1815.</p>
+
+                                    <Link>
+                                        <a href = "#" className = "HomeAncore"> scopri </a>
+                                    </Link>
                                 </Carousel.Caption>
+
                             </Carousel.Item>
 
                             <Carousel.Item>
-                                    <img src="https://placedog.net/500" alt="" />
+                                    <img src = {imgB3} alt="" />
 
                                 <Carousel.Caption>
                                     <h3>La Battaglia di Stalingrado</h3>
                                     <p>Un punto di svolta nella Seconda Guerra Mondiale.</p>
+
+                                    <Link>
+                                        <a href = "#" className = "HomeAncore"> scopri </a>
+                                    </Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
 
                             <Carousel.Item>
-                                <img src="https://placedog.net/500" alt="" />
+                                <img src = {imgB4} alt="" />
 
                                 <Carousel.Caption>
                                     <h3>Battaglia di Midway</h3>
                                     <p>Decisiva battaglia nel Pacifico durante la Seconda Guerra Mondiale.</p>
+
+                                    <Link>
+                                        <a href = "#" className = "HomeAncore"> scopri </a>
+                                    </Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
 
                             <Carousel.Item>
-                                <img src="https://placedog.net/500" alt="" />
+                                <img src = {imgB5} alt="" />
 
                                 <Carousel.Caption>
 `                                    <h3>Battaglia di Lepanto</h3>
-                                    <p>Importante vittoria contro l'Impero Ottomano nel 1571.</p>`
+                                    <p>Importante vittoria contro l'Impero Ottomano nel 1571.</p>
+
+                                    <Link>
+                                        <a href = "#" className = "HomeAncore"> scopri </a>
+                                    </Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
                         </Carousel>
                 </div>
 
-                <div className = 'HomeDivDestra'>
+                <div id = 'HomeDiv2'>
                     <p className = "HomeDivParagrafiDestra">
                         L'essere umano è il essere con il più alto potenziale per distruggere 💥, ma è anche l'essere con le capacità più alte di creare cose inimmaginabili 🎨. 
                         Le invenzioni 🛠️ nel corso dei millenni sono state così tante da essere impossibile da contare, poiché possono variare da piccole invenzioni quotidiane a scoperte che hanno influenzato profondamente la storia dell'uomo 📖. 
@@ -152,55 +194,75 @@ const MainHome = () => {
                         </Link>        
                     </p>
 
-                        <Carousel>
+                        <Carousel className = "HomeCaroselli">
                             <Carousel.Item>
-                                    <img src="" alt="" />
+                                    <img src = {imgI1} alt="" />
 
                                 <Carousel.Caption>
                                     <h3>Invenzione della ruota</h3>
-                                <p>Una delle invenzioni più antiche e fondamentali.</p>
+                                    <p>Una delle invenzioni più antiche e fondamentali.</p>
+
+                                    <Link>
+                                        <a href = "#" className = "HomeAncore"> scopri </a>
+                                    </Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
 
                             <Carousel.Item>
-                                    <img src="" alt="" />
+                                    <img src = {imgI2} alt="" />
 
                                 <Carousel.Caption>
                                     <h3>La stampa di Gutenberg</h3>
-                                <p>Ha rivoluzionato la diffusione della conoscenza.</p>
+                                    <p>Ha rivoluzionato la diffusione della conoscenza.</p>
+
+                                    <Link>
+                                        <a href = "#" className = "HomeAncore"> scopri </a>
+                                    </Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
 
                             <Carousel.Item>
-                                    <img src="" alt="" />
+                                    <img src = {imgI3} alt="" />
 
                                 <Carousel.Caption>
                                     <h3>L'energia elettrica</h3>
-                                <p>Ha trasformato la società moderna.</p>
+                                    <p>Ha trasformato la società moderna.</p>
+
+                                    <Link>
+                                        <a href = "#" className = "HomeAncore"> scopri </a>
+                                    </Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
 
                             <Carousel.Item>
-                                <img src="" alt="" />
+                                <img src = {imgI4} alt="" />
 
                                 <Carousel.Caption>
                                     <h3>Il telefono di Bell</h3>
-                                <p>Ha rivoluzionato le comunicazioni a lunga distanza.</p>
+                                    <p>Ha rivoluzionato le comunicazioni a lunga distanza.</p>
+
+                                    <Link>
+                                        <a href = "#" className = "HomeAncore"> scopri </a>
+                                    </Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
 
                             <Carousel.Item>
-                                <img src="" alt="" />
+                                <img src = {imgI5} alt="" />
 
                                 <Carousel.Caption>
 `                                   <h3>Il motore a combustione interna</h3>
-                                <p>Ha alimentato il trasporto moderno.</p>
+                                    <p>Ha alimentato il trasporto moderno.</p>
+
+                                    <Link>
+                                        <a href = "#" className = "HomeAncore"> scopri </a>
+                                    </Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
                         </Carousel>
                 </div>
 
-                <div className = 'HomeDivSinistra'>
+                <div id = 'HomeDiv3'>
                     <p className = "HomeDivParagrafiSinistra">
                         In ogni epoca 🕰️ le persone pensavano di vivere nell'epoca moderna, ma con il passare del tempo, man mano che la storia dell'uomo avanzava, si sono attribuiti nuovi nomi alle epoche passate 🏛️. 
                         Ogni epoca riceve il suo nome in base a eventi incredibili o invenzioni uniche. L'attuale epoca potrebbe essere solo una tappa, mentre le future potrebbero portare miglioramenti o sfide 🌅🌑. 
@@ -210,55 +272,75 @@ const MainHome = () => {
                         </Link>           
                     </p>
 
-                        <Carousel>
+                        <Carousel className = "HomeCaroselli">
                             <Carousel.Item>
-                                    <img src="" alt="" />
+                                    <img src = {imgE1} alt="" />
 
                                 <Carousel.Caption>
                                     <h3>Epoca del Rinascimento</h3>
-                                <p>Fioritura artistica e culturale in Europa.</p>
+                                    <p>Fioritura artistica e culturale in Europa.</p>
+
+                                    <Link>
+                                        <a href = "#" className = "HomeAncore"> scopri </a>
+                                    </Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
 
                             <Carousel.Item>
-                                    <img src="" alt="" />
+                                    <img src = {imgE2} alt="" />
 
                                 <Carousel.Caption>
                                     <h3>Età Industriale</h3>
-                                <p>Inizio della produzione di massa e innovazioni tecnologiche.</p>
+                                    <p>Inizio della produzione di massa e innovazioni tecnologiche.</p>
+
+                                    <Link>
+                                        <a href = "#" className = "HomeAncore"> scopri </a>
+                                    </Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
 
                             <Carousel.Item>
-                                    <img src="" alt="" />
+                                    <img src = {imgE3} alt="" />
 
                                 <Carousel.Caption>
                                     <h3>Era Digitale</h3>
-                                <p>La rivoluzione della tecnologia e dell'informazione.</p>
+                                    <p>La rivoluzione della tecnologia e dell'informazione.</p>
+
+                                    <Link>
+                                        <a href = "#" className = "HomeAncore"> scopri </a>
+                                    </Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
 
                             <Carousel.Item>
-                                <img src="" alt="" />
+                                <img src = {imgE4} alt="" />
 
                                 <Carousel.Caption>
                                     <h3>Epoca dell'Antica Grecia</h3>
-                                <p>Origini della filosofia, della democrazia e della scienza.</p>
+                                    <p>Origini della filosofia, della democrazia e della scienza.</p>
+
+                                    <Link>
+                                        <a href = "#" className = "HomeAncore"> scopri </a>
+                                    </Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
 
                             <Carousel.Item>
-                                <img src="" alt="" />
+                                <img src = {imgE5} alt="" />
 
                                 <Carousel.Caption>
-`                                     <h3>Impero Romano</h3>
-                                <p>Innovazioni in diritto, architettura e infrastrutture.</p>
+`                                   <h3>Impero Romano</h3>
+                                    <p>Innovazioni in diritto, architettura e infrastrutture.</p>
+
+                                    <Link>
+                                        <a href = "#" className = "HomeAncore"> scopri </a>
+                                    </Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
                         </Carousel>
                 </div>
 
-                <div className = 'HomeDivDestra'>
+                <div id = 'HomeDiv4'>
                     <p className = "HomeDivParagrafiDestra">
                         Così come ci sono diversi continenti 🌎🌍🌏, anche la storia dell'uomo si dipana in modi unici e diversi a seconda delle regioni 🗺️. 
                         Ogni continente ha la sua propria storia 📝, ricca di culture, eventi e innovazioni che hanno contribuito a plasmare il mondo 🌍. 

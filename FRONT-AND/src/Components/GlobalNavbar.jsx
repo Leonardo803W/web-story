@@ -30,7 +30,9 @@ const GlobalNavbar = () => {
               </svg>
             </Button>
 
-            <h1 id = "title">Storia sul Web</h1>
+            <Link to = {'/'} className = "text-decoration-none">
+              <h1 id = "title">Storia sul Web</h1>
+            </Link>
 
             <div id = "navbar-item-desktop">
               <p>
