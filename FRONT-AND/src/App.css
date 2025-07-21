@@ -160,13 +160,21 @@
 }
 
 #para1, #para2, #para3, #para4, #para5 {
-    margin: 0;
-    padding: 2rem;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    text-shadow: 0px 1px 4px;
-    font-weight: bold;
+  margin: 0;
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0px 1px 4px;
+  font-weight: bold;
+}
+
+@media (min-width: 426px){
+    #para1, #para2, #para3, #para4, #para5 {
+      padding: 2rem;
+      margin-top: 0;
+  }
 }
 
 .visible {
@@ -203,14 +211,15 @@
   flex-direction: column;
 }
 
+
 #slide-img-sinistra img{
-  width: 40%;
+  width: 0%;
   height: 15rem;
   animation: slideImgSinistra 2s ease-in-out;
 }
 
 #slide-img-destra img{
-  width: 40%;
+  width: 0%;
   height: 15rem;
   animation: slideImgDestra 2s ease-in-out;
 }
@@ -220,7 +229,7 @@
     width: 100%;
   }
   100% {
-    width: 40%;
+    width: 0%;
   }
 }
 
@@ -229,7 +238,40 @@
     width: 100%;
   }
   100% {
+    width: 0%;
+  }
+}
+
+@media (min-width: 426px){
+
+  #slide-img-sinistra img{
     width: 40%;
+    height: 15rem;
+    animation: slideImgSinistra 2s ease-in-out;
+  }
+
+  #slide-img-destra img{
+    width: 40%;
+    height: 15rem;
+    animation: slideImgDestra 2s ease-in-out;
+  }
+
+  @keyframes slideImgDestra {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 40%;
+    }
+  }
+
+  @keyframes slideImgSinistra {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 40%;
+    }
   }
 }
 
@@ -255,9 +297,27 @@
 
 #HomeDiv1, #HomeDiv2, #HomeDiv3, #HomeDiv4{
   text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 1201px) {
+  #HomeDiv1, #HomeDiv2, #HomeDiv3, #HomeDiv4{
+    display: flex;
+  }
+}
+
+#giraPagina{
+  width: 70%;
+  height: 10rem;
+  border-radius: 3rem;
+  border: unset;
+}
+
+#giraPagina:hover{
+  background-color: red;
+  color: white;
+  box-shadow: 0px 5px 9px 3px;
 }
 
 #HomeDiv1{
@@ -286,21 +346,26 @@
   border-right: black 3px solid;
   background-color: white;
   border-radius: 4rem;
-  width: 100%;
+  width: 92%;
 }
 
 .HomeCaroselli{
+  width: 93%;
+  background-color: black;
   margin: 1rem;
   padding: 1rem;
-  background-color: #89a18e;
   border-radius: 2rem;
-  border-left: black 3px solid;
-  width: 45%;
 }
 
 .HomeCaroselli img{
   width: 100%;
   height: 22rem;
+}
+
+@media (min-width: 426px) {
+    .HomeCaroselli img{
+    height: 35rem;
+  }
 }
 
 .HomeCaroselli h3, .HomeCaroselli p{
@@ -321,9 +386,44 @@
   color: black;
   border-radius: 50px;
   border-color: red;
+  background-color: #dfdfdf8a;
 }
 
 .HomeAncore:hover{
   background-color: red;
   box-shadow: 0px 0px 15px 1px;
 }
+
+.DivVisible {
+  animation: visible1 1s forwards;
+  width: 100%;
+}
+
+.DivHidden {
+  animation: hidden1 0.5s forwards;
+}
+        @keyframes visible1 {
+          0% {
+            opacity: 0;
+            transform: translateX(-100%);
+            display: none;
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+            display: block;
+          }
+        }
+
+                @keyframes hidden1 {
+          0% {
+            opacity: 1;
+            transform: translateX(0);
+            display: block;
+          }
+          100% {
+            opacity: 0;
+            transform: translateX(100%);
+            display: none;
+          }
+        }
