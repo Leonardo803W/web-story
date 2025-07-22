@@ -120,7 +120,8 @@ const MainHome = () => {
 
       <div id='HomeDiv1'>
         <div className={animateDiv1 ? "DivVisible" : "DivHidden"}>
-          <p className="HomeDivParagrafiSinistra">
+
+          <p className="HomeDivParagrafi">
             La storia dell'uomo è stata impregnata di battaglie ⚔️, spesso anche piccole battaglie possono decidere il destino di un paese. 
             Ma certe battaglie hanno influenzato profondamente la storia che conosciamo 📜. 
             Alcune erano prevedibili nella loro direzione, mentre altre non si poteva mai immaginare come sarebbe andata, rendendo difficile anche solo immaginare come sarebbe stata diversa la storia 🌟. 
@@ -194,7 +195,8 @@ const MainHome = () => {
       <div id='HomeDiv2'>
        
         <div className={animateDiv2 ? "DivVisible" : "DivHidden"}>
-          <p className="HomeDivParagrafiSinistra">
+
+          <p className="HomeDivParagrafi">
             L'essere umano è il essere con il più alto potenziale per distruggere 💥, ma è anche l'essere con le capacità più alte di creare cose inimmaginabili 🎨. 
             Le invenzioni 🛠️ nel corso dei millenni sono state così tante da essere impossibile da contare, poiché possono variare da piccole invenzioni quotidiane a scoperte che hanno influenzato profondamente la storia dell'uomo 📖. 
             Diversi inventori 🚀 hanno camminato sulla stessa terra 🌎, tutti uniti dall'obiettivo di inventare, costruire, rinnovare o creare ✨. 
@@ -269,7 +271,8 @@ const MainHome = () => {
       <div id='HomeDiv3'>
         
         <div className={animateDiv3 ? "DivVisible" : "DivHidden"}>
-          <p className="HomeDivParagrafiSinistra">
+
+          <p className="HomeDivParagrafi">
             In ogni epoca 🕰️ le persone pensavano di vivere nell'epoca moderna, ma con il passare del tempo, man mano che la storia dell'uomo avanzava, si sono attribuiti nuovi nomi alle epoche passate 🏛️. 
             Ogni epoca riceve il suo nome in base a eventi incredibili o invenzioni uniche. L'attuale epoca potrebbe essere solo una tappa, mentre le future potrebbero portare miglioramenti o sfide 🌅🌑. 
             Tuttavia, come dimostra la storia 📚, anche nelle epoche più buie 🌑 emergono nuovi talenti 🎯 e invenzioni sorprendenti 🚀. È fondamentale continuare ad andare avanti, imparando dal passato e preparando il futuro 🌟.              
@@ -343,7 +346,7 @@ const MainHome = () => {
       <div id='HomeDiv4'>
         
         <div>
-          <p className="HomeDivParagrafiSinistra">
+          <p className = "HomeDivParagrafi">
             Così come ci sono diversi continenti 🌎🌍🌏, anche la storia dell'uomo si dipana in modi unici e diversi a seconda delle regioni 🗺️. 
             Ogni continente ha la sua propria storia 📝, ricca di culture, eventi e innovazioni che hanno contribuito a plasmare il mondo 🌍. 
             Dalle grandi civiltà dell'Antico Egitto e della Cina 🏺, alle rivoluzioni e scoperte in Europa 🏰, alle tradizioni e sfide delle Americhe 🇺🇸🇧🇷, ogni continente ha il suo ruolo speciale nella grande narrazione dell'umanità 🌟. 
