@@ -13,6 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path = '/' element = {<SchermataHome />} />
+          
           <Route path = 'inLavorazione' element = {<ComponenteSingolo />} />
         </Routes>
       </BrowserRouter>

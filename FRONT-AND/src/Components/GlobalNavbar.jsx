@@ -35,16 +35,16 @@ const GlobalNavbar = () => {
             </Link>
 
             <div id = "navbar-item-desktop">
-              <p>
-                <Link to = "#">Battaglie</Link>
+              <p className = "enter">
+                <Link to = 'inLavorazione'>Battaglie</Link>
               </p>
-              <p>
+              <p className = "notEnter">
                 <Link to = "#">Invenzioni</Link>
               </p>
-                            <p>
+              <p className = "notEnter">
                 <Link to = "#">Epoche</Link>
               </p>
-                            <p>
+              <p className = "notEnter">
                 <Link to = "#">Continenti</Link>
               </p>
             </div>
@@ -72,11 +72,11 @@ const GlobalNavbar = () => {
           <Offcanvas.Title>Sezioni disponibili:</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-            <p className = "navbar-item-mobile">
-              <Link to = "#">Battaglie</Link>
+            <p className = "navbar-item-mobile enter">
+              <Link to = 'inLavorazione'>Battaglie</Link>
             </p>
 
-            <p className = "navbar-item-mobile" isActive>
+            <p className = "navbar-item-mobile notEnter" isActive>
               <Link to = "#">Invenzioni</Link>
             </p>
 

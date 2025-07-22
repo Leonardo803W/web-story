@@ -44,6 +44,14 @@
   }
 }
 
+.notEnter{
+  cursor: not-allowed;
+}
+
+.notEnter a{
+  cursor: not-allowed;
+}
+
 #title{
     color: rgb(0 0 0);
     margin: 0%;
@@ -385,4 +393,47 @@
 .HomeAncore:hover{
   background-color: red;
   box-shadow: 0px 0px 15px 1px;
+}
+
+/*ComponenteSingolo*/
+
+.groupCapitoliBattle{
+  display: flex;
+  background-image: url('../src/img/battaglie.avif');
+  background-size: contain;
+}
+
+.capitoli{
+  padding: 1rem;
+  margin: 1rem;
+  background-color: rgba(255, 255, 0, 0.342);
+  border-radius: 2rem;
+  font-size: small;
+}
+
+.capitoli:hover{
+  background-color: red;
+  color: white;
+  box-shadow: 0px 0px 14px 4px;
+}
+
+.active{
+  box-shadow: 0px 0px 14px 4px;
+  color: black;
+  border-radius: 2rem;
+  padding: 1rem;
+  position: relative;
+  left: 3rem;
+  background-color: yellow;
+}
+
+.enter{
+  cursor: pointer;
+}
+
+.bigCard{
+  background-color: #ffffffbd;
+  margin: 1rem;
+  border-radius: 5rem;
+  text-align: center;
 }
