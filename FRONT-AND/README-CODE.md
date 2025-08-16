@@ -8,7 +8,12 @@ npm install
 
 - poi fare:
 
+
 npm start
+
+- per muoversi:
+
+cd + nome_cartella
 
 Ricordare!! di eseguire questi comandi all'interno della cartella della applicazione React per installare le librerie nel contesto corretto.
 

@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 const GlobalNavbar = () => {
@@ -23,7 +20,8 @@ const GlobalNavbar = () => {
 
   return (
     <>
-        <section id = "navbar">
+        <section id = "sectiopnNavbar">
+          <div id = "navbar">
             <Button onClick={handleShow} id = "show-on-mobile">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
@@ -36,7 +34,7 @@ const GlobalNavbar = () => {
 
             <div id = "navbar-item-desktop">
               <p className = "enter">
-                <Link to = 'inLavorazione'>Battaglie</Link>
+                <Link to = 'SchermataBattaglie'>Battaglie</Link>
               </p>
               <p className = "notEnter">
                 <Link to = "#">Invenzioni</Link>
@@ -64,24 +62,20 @@ const GlobalNavbar = () => {
                   </div>
                 }
             </div>
-
+          </div>
         </section>
 
       <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
+        <Offcanvas.Header closeButton id = "offCansHeader">
           <Offcanvas.Title>Sezioni disponibili:</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
-            <p className = "navbar-item-mobile enter">
-              <Link to = 'inLavorazione'>Battaglie</Link>
+        <Offcanvas.Body id = "offCanvsBody">
+            <p>
+              <Link to = 'SchermataBattaglie'>Battaglie</Link>
             </p>
 
-            <p className = "navbar-item-mobile notEnter" isActive>
+            <p>
               <Link to = "#">Invenzioni</Link>
-            </p>
-
-            <p className="navbar-item-mobile">
-              <Link to = "#"></Link>
             </p>
         </Offcanvas.Body>
       </Offcanvas>

@@ -1,47 +1,27 @@
 /*GlobalNavbar*/
 
+#sectiopnNavbar{
+  margin-bottom: 6rem;
+}
+
 #navbar{
+  position: fixed;
+  top: 0;
+  z-index: 3;
   display: flex;
   justify-content: space-around;
   background-color: black;
   align-items: center;
-  /*position: fixed;
-  z-index: 3;*/
   width: 100%;
   border-bottom: #E91E63 4px solid;
   background-size: 426px 167px;
   height: 6rem;
 }
 
-@media (min-width: 426px) {
-  #navbar{
-    background-size: 386px 167px;
-  }
-}
-
-@media (min-width: 769px) {
-  #navbar{
-    background-size: 342px 167px;
-  }
-}
-
-@media (min-width: 426px) {
-  #navbar{
-    background-size: 386px 167px;
-  }
-}
-
 #show-on-mobile {
   display: block;
   background: #ffffff99;
   border-color: unset;
-}
-
-/* Media query per nascondere il pulsante sui desktop e mostrarlo sui dispositivi mobili */
-@media (min-width: 769px) {
-  #show-on-mobile {
-    display: none;
-  }
 }
 
 .notEnter{
@@ -53,17 +33,83 @@
 }
 
 #title{
-    color: rgb(0 0 0);
-    margin: 0%;
-    background: #ffffff99;
+  color: rgb(0 0 0);
+  margin: 0%;
+  background: #ffffff99;
 }
 
 #navbar-item-desktop{
  display: none;
 }
 
-/* Media query per mostrare le sezioni della navbar su laptop e desktop */
+#navbar-profile{
+  background: #ffffff99;
+  border-color: unset;
+  padding: 1rem;
+}
+
+#profile-items{
+  position: absolute;
+  top: 5rem;
+  right: 0rem;
+  background-color: white;
+  z-index: 3;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  animation: list 0.1s ease-in-out;
+}
+
+#offCansHeader{
+  background-color: #453d3d;
+  color: white;
+}
+
+#offCanvsBody{
+  background: linear-gradient(137deg, rgba(61, 61, 94, 1) 0%,  rgba(136, 207, 122, 1) 32%, rgba(65, 166, 135, 1) 63%, rgba(0, 212, 255, 1) 100%);
+}
+
+#offCanvsBody p{
+  margin: 0;
+  padding: 1rem;
+  border-bottom: black 1px solid;
+}
+
+#offCanvsBody a{
+  color: white;
+  text-decoration: unset;
+}
+
+/*animazioni*/
+
+@keyframes list {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+/*media query per tablet*/
+
+@media (min-width: 426px) {
+  #navbar{
+    background-size: 386px 167px;
+  }
+}
+
+/*media query per laptop*/
+
 @media (min-width: 769px) {
+  #navbar{
+    background-size: 342px 167px;
+  }
+
+  #show-on-mobile {
+    display: none;
+  }  
+  
   #navbar-item-desktop{
       display: flex;
       background: #ffffff99;
@@ -85,35 +131,139 @@
   }
 }
 
-#navbar-profile{
-  background: #ffffff99;
-  border-color: unset;
-  padding: 1rem;
-}
-
-#profile-items{
-    position: absolute;
-    /*right: 2rem;
-    top: 5rem;*/
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 1rem;
-    animation: list 0.5s ease-in-out;
-}
-
-@keyframes list {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(100px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
 /*MainHome*/
+
+/*classi comuni a tutte le section*/
+
+#HomeDiv1, #HomeDiv2, #HomeDiv3, #HomeDiv4{
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: #00ff34 5px solid;
+  border-bottom: #00ff34 5px solid;
+}
+
+.HomeDivParagrafi{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  border-right: black 3px solid;
+  border-bottom: black 3px solid;
+  background-color: white;
+  border-radius: 6rem;
+  width: 90%;
+  font-size: small;
+}
+
+.contenuto img{
+  width: 100%;
+  height: 12rem;
+  padding: 0.5rem;
+  background-color: black;
+}
+
+.contenuto h3{
+  /*background-color: linear-gradient(-229deg yellow red);*/
+  margin: 0;
+  padding: 1rem;
+  font-size: medium;
+}
+
+.contenuto p{
+  /*background-color: linear-gradient(-229deg #f07fff #0919f7);*/
+  margin: 0;
+  font-size: small;
+}
+
+.carrousel{
+  display: grid;
+  grid-auto-flow: column;
+  scroll-behavior: auto;
+  gap: 1.2rem;
+  overflow: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carrousel::-webkit-scrollbar{
+  display: none;
+}
+
+.card{
+  scroll-snap-align: start;
+  min-height: 200px;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+}
+
+.HomeAncore{
+  display: block;
+  border: #ffffff 1px solid;
+  padding: 1rem;
+  margin: 1rem;
+  color: black;
+  border-radius: 50px;
+  border-color: red;
+  background-color: #dfdfdf8a;
+}
+
+.HomeAncore:hover{
+  background-color: red;
+  box-shadow: 0px 0px 15px 1px;
+}
+
+#giraPagina{
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 3rem;
+  border: unset;
+}
+
+#giraPagina:hover{
+  background-color: red;
+  color: white;
+  box-shadow: 0px 5px 9px 3px;
+}
+
+.divVisible{
+  animation: visibleDiv 1s ease-in;
+}
+
+.carousellVisible{
+  animation: VisibleCarousell 1s ease-out;
+}
+
+/*animation*/
+
+@keyframes visibleDiv {
+  0%{
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+  100%{
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes VisibleCarousell {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/*section1*/
+
+#HomeDiv1{
+  background-image: url('../src/img/battaglie.avif');
+  background-size: contain;
+}
 
 .group-paragrafer{
   opacity: 1;
@@ -138,13 +288,7 @@
   margin-right: auto;
   text-shadow: 0px 1px 4px;
   font-weight: bold;
-}
-
-@media (min-width: 426px){
-    #para1, #para2, #para3, #para4, #para5 {
-      padding: 2rem;
-      margin-top: 0;
-  }
+  font-size: small;
 }
 
 .visible {
@@ -167,6 +311,18 @@
   width: 100%;
 }
 
+#immagine2{
+  transform: scaleY(-1);
+}
+
+#immagine3{
+  transform: scalex(-1);
+}
+
+#immagine4{
+  transform: scale(-1);
+}
+
 #slide-img-sinistra{
   width: 50%;
   animation: slideImg 2s ease-in-out;
@@ -187,12 +343,13 @@
   flex-direction: column;
 }
 
-
 #slide-img-destra img{
   width: 0%;
   height: 15rem;
   animation: slideImgDestra 2s ease-in-out;
 }
+
+/*animazioni*/
 
 @keyframes slideImgDestra {
   0% {
@@ -212,7 +369,14 @@
   }
 }
 
+/*media query per tablet*/
+
 @media (min-width: 426px){
+
+  #para1, #para2, #para3, #para4, #para5 {
+      padding: 2rem;
+      margin-top: 0;
+  }
 
   #slide-img-sinistra img{
     width: 40%;
@@ -225,6 +389,8 @@
     height: 15rem;
     animation: slideImgDestra 2s ease-in-out;
   }
+
+  /*animazioni per tablet*/
 
   @keyframes slideImgDestra {
     0% {
@@ -245,154 +411,25 @@
   }
 }
 
-/*inizio style per le immagini in home*/
-
-#immagine1{
-
-}
-
-#immagine2{
-  transform: scaleY(-1);
-}
-
-#immagine3{
-  transform: scalex(-1);
-}
-
-#immagine4{
-  transform: scale(-1);
-}
-
-/*fine style per le immagini in home*/
-
-#HomeDiv1, #HomeDiv2, #HomeDiv3, #HomeDiv4{
-  text-align: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-top: #00ff34 5px solid;
-  border-bottom: #00ff34 5px solid;
-}
-
-#HomeDiv1{
-  background-image: url('../src/img/battaglie.avif');
-  background-size: contain;
-}
+/*section2*/
 
 #HomeDiv2{
   background-image: url('../src/img/invenzioni.jpg');
   background-size: contain;
 }
 
+/*section3*/
+
 #HomeDiv3{
   background-image: url('../src/img/epoche.jpg');
   background-size: contain;
 }
 
+/*section4*/
+
 #HomeDiv4{
   background-image: url('../src/img/continenti.jpg');
   background-size: contain;
-}
-
-.HomeDivParagrafi{
-  margin: 1rem;
-  padding: 5rem;
-  border-right: black 3px solid;
-  background-color: white;
-  border-radius: 4rem;
-  width: 92%;
-}
-
-#giraPagina{
-  width: 70%;
-  height: 10rem;
-  border-radius: 3rem;
-  border: unset;
-}
-
-#giraPagina:hover{
-  background-color: red;
-  color: white;
-  box-shadow: 0px 5px 9px 3px;
-}
-
-.DivVisible {
-  animation: visible1 1s forwards;
-  width: 100%;
-}
-
-.DivHidden {
-  animation: hidden1 0.5s forwards;
-}
-
-@keyframes visible1 {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-    display: none;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-    display: block;
-  }
-}
-
-        @keyframes hidden1 {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-    display: block;
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(100%);
-    display: none;
-  }
-}
-
-.HomeCaroselli{
-  width: 93%;
-  background-color: black;
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 2rem;
-}
-
-.HomeCaroselli img{
-  width: 100%;
-  height: 22rem;
-}
-
-@media (min-width: 426px) {
-    .HomeCaroselli img{
-    height: 35rem;
-  }
-}
-
-.HomeCaroselli h3, .HomeCaroselli p{
-  margin: 1rem;
-  background-color: white;
-  color: black;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  font-size: medium;
-}
-
-.HomeAncore{
-  display: block;
-  border: #ffffff 1px solid;
-  padding: 1rem;
-  text-align: center;
-  margin-top: 3rem;
-  color: black;
-  border-radius: 50px;
-  border-color: red;
-  background-color: #dfdfdf8a;
-}
-
-.HomeAncore:hover{
-  background-color: red;
-  box-shadow: 0px 0px 15px 1px;
 }
 
 /*ComponenteSingolo*/
@@ -422,8 +459,11 @@
   color: black;
   border-radius: 2rem;
   padding: 1rem;
-  position: relative;
-  left: 3rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  position: sticky;
+  z-index: 3;
+  width: 90%;
   background-color: yellow;
 }
 
@@ -437,3 +477,4 @@
   border-radius: 5rem;
   text-align: center;
 }
+

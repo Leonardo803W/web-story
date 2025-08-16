@@ -6,7 +6,7 @@ const SchermataBattaglie = () => {
     return(
         <>
             <GlobalNavbar/>
-
+            
             <ComponenteSingolo/>
         </>
     )

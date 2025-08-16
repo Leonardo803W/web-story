@@ -9,7 +9,7 @@ const ComponenteSingolo = () => {
 
     const [data, setData] = useState ([])
     const [data1, setData1] = useState ([])
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
     const [activeIndex, setActiveIndex] = useState(null);
@@ -85,8 +85,6 @@ const ComponenteSingolo = () => {
             <Link to = '/'>
                 <button>torna in home</button>
             </Link>*/}
-
-            <GlobalNavbar/>
 
             <section className = "groupCapitoliBattle">
                 <div>

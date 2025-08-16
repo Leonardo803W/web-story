@@ -2,8 +2,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
+import SchermataBattaglie from './Components/SchermataBattaglie';
 import SchermataHome from './Components/SchermataHome';
-import ComponenteSingolo from './Components/ComponenteSingolo';
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path = '/' element = {<SchermataHome />} />
           
-          <Route path = 'inLavorazione' element = {<ComponenteSingolo />} />
+          <Route path = 'SchermataBattaglie' element = {<SchermataBattaglie />} />
         </Routes>
       </BrowserRouter>
 
