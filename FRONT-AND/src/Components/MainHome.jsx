@@ -25,6 +25,34 @@ import imgE3 from '../img/img (caroselli home)/epoche/Era Digitale.jpg'
 import imgE4 from "../img/img (caroselli home)/epoche/Epoca dell'Antica Grecia.avif"
 import imgE5 from '../img/img (caroselli home)/epoche/Impero Romano.jpg'
 
+  const cards = [
+    { id: 1, 
+        img: {imgB1},
+        title: 'Battaglia di Hastings', 
+        content: "La conquista normanna dell'Inghilterra nel 1066." 
+      },
+    { id: 2, 
+        img: {imgB2},
+        title: 'Battaglia di Waterloo', 
+        content: 'La sconfitta di Napoleone nel 1815.'
+      },
+    { id: 3, 
+        img: {imgB3},
+        title: 'La Battaglia di Stalingrado', 
+        content: 'Un punto di svolta nella Seconda Guerra Mondiale.'
+      },
+    { id: 4, 
+        img: {imgB4},
+        title: 'Battaglia di Midway', 
+        content: 'Decisiva battaglia nel Pacifico durante la Seconda Guerra Mondiale.'
+      },
+    { id: 5, 
+        img: {imgB5},
+        title: 'Battaglia di Lepanto', 
+        content: "Importante vittoria contro l'Impero Ottomano nel 1571."
+      },
+  ];
+
 const MainHome = () => {
 
     const [animateDiv1, setAnimateDiv1] = useState(true);
@@ -33,9 +61,19 @@ const MainHome = () => {
     const [animateCarosell2, setAnimateCarosell2] = useState(false);
     const [animateDiv3, setAnimateDiv3] = useState(true);
     const [animateCarosell3, setAnimateCarosell3] = useState(false);
+
     // Stato che traccia quale paragrafo è attualmente visibile
     const [currentParagraph, setCurrentParagraph] = useState(0);
     const totalParagraphs = 5;
+
+    //variabili per i caroselli
+    const [activeIndex1, setActiveIndex1] = useState (0)
+    const [activeIndex2, setActiveIndex2] = useState (0)
+    const [activeIndex3, setActiveIndex3] = useState (0)
+    const totalCards = cards.length;
+
+    // Per la barra di progresso del primo carosello
+    //const progress = ((activeIndex1 + 1) / totalCards) * 100;
 
   useEffect(() => {
     if (currentParagraph < totalParagraphs) {
@@ -71,6 +109,56 @@ const MainHome = () => {
     }
   };
 
+  /*
+  funzione da sistemare
+  //funzione per avere la card attiva sempre al centro
+  const getVisibleCards = () => {
+    const visibleCards = [];
+    const start = Math.max(0, activeIndex1 - 1);
+    const end = Math.min(totalCards - 1, activeIndex1 + 1);
+    
+    for (let i = start; i <= end; i++) 
+    {
+      visibleCards.push(i);
+    }
+      return visibleCards;
+  };
+
+  //funzione per avere la card attiva sempre al centro
+  const visibleIndices = getVisibleCards();
+  */
+
+  const goToNextOrPrev = (n, next) => {
+
+    if(next === 'next')
+    {
+      switch(n){
+        case 1:
+          setActiveIndex1(prev => Math.min(prev + 1, totalCards - 1));
+        break;
+        case 2:
+          setActiveIndex2(prev => Math.min(prev + 1, totalCards - 1))
+        break;
+        case 3:
+          setActiveIndex3(prev => Math.min(prev + 1, totalCards - 1))
+        break;
+      }
+    }
+    else
+    {
+      switch(n){
+        case 1:
+          setActiveIndex1(prev => Math.max(prev - 1, 0));
+        break;
+        case 2:
+          setActiveIndex2(prev => Math.max(prev - 1, 0))
+        break;
+        case 3:
+          setActiveIndex3(prev => Math.max(prev - 1, 0))
+        break;
+      }
+    }
+  };
 
   return (
     <>
@@ -124,56 +212,33 @@ const MainHome = () => {
           </div>
 
           <div className={animateCarosell1 ? "carousellVisible" : "d-none"}>
-            <div className = "contenuto">
-              <div className = "carrousel">
-                <article className = "card">
-                  <img src={imgB1} alt="" />
-                  <h3>Battaglia di Hastings</h3>
-                  <p>La conquista normanna dell'Inghilterra nel 1066.</p>
-                  <Link>
-                    <a href="#" className="HomeAncore"> scopri </a>
-                  </Link>
-                </article>
+                <div className="carousel-wrapper">
 
-                <article className = "card">
-                  <img src={imgB2} alt="" />
-                  <h3>Battaglia di Waterloo</h3>
-                  <p>La sconfitta di Napoleone nel 1815.</p>
-                  <Link>
-                    <a href="#" className="HomeAncore"> scopri </a>
-                  </Link>
-                </article>
+                  <button className="arrow" onClick = {() => goToNextOrPrev(1)}>&lt;</button>
 
-                <article className = "card">
-                  <img src={imgB3} alt="" />
-                  <h3>La Battaglia di Stalingrado</h3>
-                  <p>Un punto di svolta nella Seconda Guerra Mondiale.</p>
-                  <Link>
-                    <a href="#" className="HomeAncore"> scopri </a>
-                  </Link>
-                </article>
+                  <article className = "box">
+                    <img src = {imgB2} alt = "copertina" />
+                    <div className="card-wrapper">
+                      {cards.map((card, index) => (
+                        <div
+                          key={card.id}
+                          className={`card ${index === activeIndex1 ? 'activeCardCarousell' : 'hiddenCardCarousell'} `}
+                        >
+                          <h3>{card.title}</h3>
+                          <p>{card.content}</p>
 
-                <article className = "card">
-                  <img src={imgB4} alt="" />
-                  <h3>Battaglia di Midway</h3>
-                  <p>Decisiva battaglia nel Pacifico durante la Seconda Guerra Mondiale.</p>
-                  <Link>
-                    <a href="#" className="HomeAncore"> scopri </a>
-                  </Link>
-                </article>
+                            <Link>
+                              <a href="#" className="HomeAncore"> scopri </a>
+                            </Link>
+                        </div>
+                      ))}
+                    </div>
+                  </article>
 
-                <article className = "card">
-                  <img src={imgB5} alt="" />
-                  <h3>Battaglia di Lepanto</h3>
-                  <p>Importante vittoria contro l'Impero Ottomano nel 1571.</p>
-                  <Link>
-                    <a href="#" className="HomeAncore"> scopri </a>
-                  </Link>
-                </article>
-              </div>
-            </div>
+                  <button className="arrow" onClick = {() => goToNextOrPrev(1, 'next')}>&gt;</button>
+                </div>
 
-            <button id="giraPagina" onClick = {() => handleGiraPagina(1)}>Pagina precedente</button>
+              <button id="giraPagina" onClick = {() => handleGiraPagina(1)}>Pagina precedente</button>
           </div>
         </div>
       </section>
@@ -197,53 +262,30 @@ const MainHome = () => {
           </div>
 
           <div className={animateCarosell2 ? "carousellVisible" : "d-none"}>
-            <div className = "contenuto">
-              <div className = "carrousel">
-                <article className = "card">
-                  <img src={imgI1} alt="" />
-                  <h3>Invenzione della ruota</h3>
-                  <p>Una delle invenzioni più antiche e fondamentali.</p>
-                  <Link>
-                    <a href="#" className="HomeAncore"> scopri </a>
-                  </Link>
-                </article>
+            <div className = "carousel-wrapper">
 
-                <article className = "card">
-                  <img src={imgI2} alt="" />
-                  <h3>La stampa di Gutenberg</h3>
-                  <p>Ha rivoluzionato la diffusione della conoscenza.</p>
-                  <Link>
-                    <a href="#" className="HomeAncore"> scopri </a>
-                  </Link>
-                </article>
+              <button className="arrow" onClick = {() => goToNextOrPrev(2)}>&lt;</button>
+                  
+                  <article className = "box">
+                    <img src = {imgB2} alt = "copertina" />
+                    <div className="card-wrapper">
+                      {cards.map((card, index) => (
+                        <div
+                          key={card.id}
+                          className={`card ${index === activeIndex2 ? 'activeCardCarousell' : 'hiddenCardCarousell'} `}
+                        >
+                          <h3>{card.title}</h3>
+                          <p>{card.content}</p>
 
-                <article className = "card">
-                  <img src={imgI3} alt="" />
-                  <h3>L'energia elettrica</h3>
-                  <p>Ha trasformato la società moderna.</p>
-                  <Link>
-                    <a href="#" className="HomeAncore"> scopri </a>
-                  </Link>
-                </article>
+                            <Link>
+                              <a href="#" className="HomeAncore"> scopri </a>
+                            </Link>
+                        </div>
+                      ))}
+                    </div>
+                  </article>
 
-                <article className = "card">
-                  <img src={imgI4} alt="" />
-                  <h3>Il telefono di Bell</h3>
-                  <p>Ha rivoluzionato le comunicazioni a lunga distanza.</p>
-                  <Link>
-                    <a href="#" className="HomeAncore"> scopri </a>
-                  </Link>
-                </article>
-
-                <article className = "card">
-                  <img src={imgI5} alt="" />
-                  <h3>Il motore a combustione interna</h3>
-                  <p>Ha alimentato il trasporto moderno.</p>
-                  <Link>
-                    <a href="#" className="HomeAncore"> scopri </a>
-                  </Link>
-                </article>
-              </div>
+              <button className="arrow" onClick = {() => goToNextOrPrev(2, 'next')}>&gt;</button>
             </div>
 
             <button id="giraPagina" onClick = {() => handleGiraPagina(2)}>Pagina precedente</button>
@@ -266,56 +308,33 @@ const MainHome = () => {
             </p>
 
             <button id="giraPagina" onClick = {() => handleGiraPagina(3)}>Pagina sucessiva</button>
-          </div>
+          </div> 
 
           <div className={animateCarosell3 ? "carousellVisible" : "d-none"}>
-            <div className = "contenuto">
-              <div className = "carrousel">
-                <article className = "card">
-                  <img src={imgE1} alt="" />
-                  <h3>Epoca del Rinascimento</h3>
-                  <p>Fioritura artistica e culturale in Europa.</p>
-                  <Link>
-                    <a href="#" className="HomeAncore"> scopri </a>
-                  </Link>
-                </article>
+            <div className = "carousel-wrapper">
 
-                <article className = "card">
-                  <img src={imgE2} alt="" />
-                  <h3>Età Industriale</h3>
-                  <p>Inizio della produzione di massa e innovazioni tecnologiche.</p>
-                  <Link>
-                    <a href="#" className="HomeAncore"> scopri </a>
-                  </Link>
-                </article>
+              <button className="arrow" onClick = {() => goToNextOrPrev(3)}>&lt;</button>
+                  
+                  <article className = "box">
+                    <img src = {imgB2} alt = "copertina" />
+                    <div className="card-wrapper">
+                      {cards.map((card, index) => (
+                        <div
+                          key={card.id}
+                          className={`card ${index === activeIndex3 ? 'activeCardCarousell' : 'hiddenCardCarousell'} `}
+                        >
+                          <h3>{card.title}</h3>
+                          <p>{card.content}</p>
 
-                <article className = "card">
-                  <img src={imgE3} alt="" />
-                  <h3>Era Digitale</h3>
-                  <p>La rivoluzione della tecnologia e dell'informazione.</p>
-                  <Link>
-                    <a href="#" className="HomeAncore"> scopri </a>
-                  </Link>
-                </article>
+                            <Link>
+                              <a href="#" className="HomeAncore"> scopri </a>
+                            </Link>
+                        </div>
+                      ))}
+                    </div>
+                  </article>
 
-                <article className = "card">
-                  <img src={imgE4} alt="" />
-                  <h3>Epoca dell'Antica Grecia</h3>
-                  <p>Origini della filosofia, della democrazia e della scienza.</p>
-                  <Link>
-                    <a href="#" className="HomeAncore"> scopri </a>
-                  </Link>
-                </article>
-
-                <article className = "card">
-                  <img src={imgE5} alt="" />
-                  <h3>Impero Romano</h3>
-                  <p>Innovazioni in diritto, architettura e infrastrutture.</p>
-                  <Link>
-                    <a href="#" className="HomeAncore"> scopri </a>
-                  </Link>
-                </article>
-              </div>
+              <button className="arrow" onClick = {() => goToNextOrPrev(3, 'next')}>&gt;</button>
             </div>
 
             <button id="giraPagina" onClick = {() => handleGiraPagina(3)}>Pagina precedente</button>

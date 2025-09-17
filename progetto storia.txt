@@ -1,0 +1,13 @@
+progetto storia
+
+framework utilizzato:
+
+- react
+
+linguaggi utilizzati front and:
+
+- html, css, javascript
+
+librerie utilizzate per front and:
+
+- bootstrap
