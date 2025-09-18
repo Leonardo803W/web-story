@@ -544,3 +544,69 @@
   border-radius: 5rem;
   text-align: center;
 }
+
+
+#contenutoSperimento{
+  background-image: url(./img/intro\ sezioni.jpg);
+  height: 23rem;
+  display: flex;
+  align-items: center;
+  background-size: contain;
+}
+
+.sezionePrincipale{
+  width: 50%;
+  padding: 1rem;
+  color: #36f479;
+}
+
+.sezionePrincipale h4{
+  margin-bottom: -1rem;
+  font-weight: 700;
+}
+
+.sezionePrincipale p{
+  margin: 0;
+  padding: 5rem;
+}
+
+#multiSezione{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  transform: skewX(20deg);
+}
+
+#multiSezioneActive{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transform: skewX(20deg);
+}
+
+.articoli{
+  width: 40%;
+  position: relative;
+  left: 4rem;
+}
+
+.articoloActive{
+  width: 250%;
+  position: relative;
+  left: 4rem;
+}
+
+#articolo1{
+  background-image: url(./img/invenzioni.jpg);
+  background-size: cover;
+}
+
+#articolo2{
+  background-image: url(./img/continenti.jpg);
+  background-size: cover;
+}
+
+#articolo3{
+  background-image: url(./img/epoche.jpg);
+  background-size: cover;
+}
