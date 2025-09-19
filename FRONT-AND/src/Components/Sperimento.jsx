@@ -41,8 +41,8 @@ const Sperimento = () => {
   return (
     <>
       <article id="contenutoSperimento">
-        <div className = {isAnyActive ? 'd-none' : 'sezionePrincipale'}>
-          <h4>L'essere umano puo essere molto di piu di quello che sembra!</h4>
+        <div className = {isAnyActive ? 'sezionePrincipaleActive' : 'sezionePrincipale'}>
+          <h4>La storia umana puo essere molto di piu di quello che sembra!</h4>
           <p>
             Di storie ce ne sono di diverse salse, tra cui Invenzioni, Continenti, Cultura e molto altro,
             nel mondo ci sono milliardi di umani, ma di storie c'e' ne sono molte di piu,
@@ -52,24 +52,27 @@ const Sperimento = () => {
 
         <section id = {isAnyActive ? 'multiSezioneActive' : 'multiSezione'}>
           <div className = {animationArticole1 ? 'articoloActive' : 'articoli'} id = "articolo1">
-            <h5>Invenzioni</h5>
-            <button onClick={() => handleClickArticole(1)}>Dettagli</button>
-            <button onClick={() => handleClickArticole(4)}>indietro</button>
+            <h5 className = {animationArticole1 ? 'articoloTitleActive' : 'articoloTitle'}>Invenzioni</h5>
+            <p className = {animationArticole1 ? 'articoloContenutoActive' : 'articoloContenuto'}>Le invenzioni sono il fulcro del progresso, vuoi sapere quali invenzioni sono state fatte?</p>
+            <button onClick={() => handleClickArticole(1)} className = {animationArticole1 ? 'd-none' : 'articoloButton'}>Dettagli</button>
+            <button onClick={() => handleClickArticole(4)} className = {animationArticole1 ? 'articoloButtonActive' : 'd-none'}>indietro</button>
           </div>
           <div className = {animationArticole2 ? 'articoloActive' : 'articoli'} id = "articolo2">
-            <h5>Continenti</h5>
-            <button onClick={() => handleClickArticole(2)}>Dettagli</button>
-            <button onClick={() => handleClickArticole(4)}>indietro</button>
+            <h5 className = {animationArticole2 ? 'articoloTitleActive' : 'articoloTitle'}>Continenti</h5>
+            <p className = {animationArticole2 ? 'articoloContenutoActive' : 'articoloContenuto'}>I continenti non sono altro che le piu grandi montagne vivibili della terra, ma ogni continente ha la sua di storia!</p>
+            <button onClick={() => handleClickArticole(2)} className = {animationArticole2 ? 'd-none' : 'articoloButton'}>Dettagli</button>
+            <button onClick={() => handleClickArticole(4)} className = {animationArticole2 ? 'articoloButtonActive' : 'd-none'}>indietro</button>
           </div>
           <div className = {animationArticole3 ? 'articoloActive' : 'articoli'} id = "articolo3">
-            <h5>Epoche</h5>
-            <button onClick={() => handleClickArticole(3)}>Dettagli</button>
-            <button onClick={() => handleClickArticole(4)}>indietro</button>
+            <h5 className = {animationArticole3 ? 'articoloTitleActive' : 'articoloTitle'}>Epoche</h5>
+            <p className = {animationArticole3 ? 'articoloContenutoActive' : 'articoloContenuto'}>Di epoche ne sono passate assai, in cui in ognuna la gente pensava di essere moderna, tu sai quale che epoca siamo in questo momento?</p>
+            <button onClick={() => handleClickArticole(3)} className = {animationArticole3 ? 'd-none' : 'articoloButton'}>Dettagli</button>
+            <button onClick={() => handleClickArticole(4)} className = {animationArticole3 ? 'articoloButtonActive' : 'd-none'}>indietro</button>
           </div>
         </section>
       </article>
     </>
   );
-};
+}
 
 export default Sperimento;

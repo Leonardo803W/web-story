@@ -55,21 +55,15 @@ import imgE5 from '../img/img (caroselli home)/epoche/Impero Romano.jpg'
 
 const MainHome = () => {
 
-    const [animateDiv1, setAnimateDiv1] = useState(true);
-    const [animateCarosell1, setAnimateCarosell1] = useState(false);
-    const [animateDiv2, setAnimateDiv2] = useState(true);
-    const [animateCarosell2, setAnimateCarosell2] = useState(false);
-    const [animateDiv3, setAnimateDiv3] = useState(true);
-    const [animateCarosell3, setAnimateCarosell3] = useState(false);
+    const [animateDiv, setAnimateDiv] = useState(true);
+    const [animateCarosell, setAnimateCarosell] = useState(false);
 
     // Stato che traccia quale paragrafo è attualmente visibile
     const [currentParagraph, setCurrentParagraph] = useState(0);
     const totalParagraphs = 5;
 
     //variabili per i caroselli
-    const [activeIndex1, setActiveIndex1] = useState (0)
-    const [activeIndex2, setActiveIndex2] = useState (0)
-    const [activeIndex3, setActiveIndex3] = useState (0)
+    const [activeIndex, setActiveIndex] = useState (0)
     const totalCards = cards.length;
 
     // Per la barra di progresso del primo carosello
@@ -92,21 +86,9 @@ const MainHome = () => {
     }
   };
 
-  const handleGiraPagina = (n) => {
-    switch(n){
-      case 1:
-        setAnimateDiv1(prev => !prev);
-        setAnimateCarosell1(prev => !prev);
-      break;
-      case 2:
-        setAnimateDiv2(prev => !prev);
-        setAnimateCarosell2(prev => !prev);
-      break;
-      case 3:
-        setAnimateDiv3(prev => !prev);
-        setAnimateCarosell3(prev => !prev);
-      break;
-    }
+  const handleGiraPagina = () => {
+    setAnimateDiv(prev => !prev);
+    setAnimateCarosell(prev => !prev);
   };
 
   /*
@@ -132,31 +114,11 @@ const MainHome = () => {
 
     if(next === 'next')
     {
-      switch(n){
-        case 1:
-          setActiveIndex1(prev => Math.min(prev + 1, totalCards - 1));
-        break;
-        case 2:
-          setActiveIndex2(prev => Math.min(prev + 1, totalCards - 1))
-        break;
-        case 3:
-          setActiveIndex3(prev => Math.min(prev + 1, totalCards - 1))
-        break;
-      }
+      setActiveIndex(prev => Math.min(prev + 1, totalCards - 1));
     }
     else
     {
-      switch(n){
-        case 1:
-          setActiveIndex1(prev => Math.max(prev - 1, 0));
-        break;
-        case 2:
-          setActiveIndex2(prev => Math.max(prev - 1, 0))
-        break;
-        case 3:
-          setActiveIndex3(prev => Math.max(prev - 1, 0))
-        break;
-      }
+      setActiveIndex(prev => Math.max(prev - 1, 0));
     }
   };
 
@@ -197,7 +159,7 @@ const MainHome = () => {
 
       <section id = "section2">
         <div id='HomeDiv1'>
-          <div className={animateDiv1 ? "divVisible" : "d-none"}>
+          <div className={animateDiv ? "divVisible" : "d-none"}>
 
             <p className="HomeDivParagrafi">
               La storia dell'uomo è stata impregnata di battaglie ⚔️, spesso anche piccole battaglie possono decidere il destino di un paese. 
@@ -211,7 +173,7 @@ const MainHome = () => {
             <button id="giraPagina" onClick = {() => handleGiraPagina(1)}>Pagina successiva</button>
           </div>
 
-          <div className={animateCarosell1 ? "carousellVisible" : "d-none"}>
+          <div className={animateCarosell ? "carousellVisible" : "d-none"}>
                 <div className="carousel-wrapper">
 
                   <button className="arrow" onClick = {() => goToNextOrPrev(1)}>&lt;</button>
@@ -222,7 +184,7 @@ const MainHome = () => {
                       {cards.map((card, index) => (
                         <div
                           key={card.id}
-                          className={`card ${index === activeIndex1 ? 'activeCardCarousell' : 'hiddenCardCarousell'} `}
+                          className={`card ${index === activeIndex ? 'activeCardCarousell' : 'hiddenCardCarousell'} `}
                         >
                           <h3>{card.title}</h3>
                           <p>{card.content}</p>
@@ -242,122 +204,6 @@ const MainHome = () => {
           </div>
         </div>
       </section>
-
-      <section id = "section3">
-        <div id='HomeDiv2'>
-        
-          <div className={animateDiv2 ? "divVisible" : "d-none"}>
-
-            <p className="HomeDivParagrafi">
-              L'essere umano è il essere con il più alto potenziale per distruggere 💥, ma è anche l'essere con le capacità più alte di creare cose inimmaginabili 🎨. 
-              Le invenzioni 🛠️ nel corso dei millenni sono state così tante da essere impossibile da contare, poiché possono variare da piccole invenzioni quotidiane a scoperte che hanno influenzato profondamente la storia dell'uomo 📖. 
-              Diversi inventori 🚀 hanno camminato sulla stessa terra 🌎, tutti uniti dall'obiettivo di inventare, costruire, rinnovare o creare ✨. 
-              Anche senza saperlo, alcuni sono stati i pilastri della scienza antica 🧪. La scienza non fa differenza di dove o da chi viene fatta, ma ciò che conta è che si evolve grazie a tutte le invenzioni!
-              <Link>
-                <a href="#" className="HomeAncore">Vuoi scoprire quali di queste invenzioni hanno avuto un impatto così grande sulla storia dell'uomo e sulla scienza di oggi?</a>
-              </Link>
-            </p>
-
-            <button id="giraPagina" onClick = {() => handleGiraPagina(2)}>Pagina sucessiva</button>
-          </div>
-
-          <div className={animateCarosell2 ? "carousellVisible" : "d-none"}>
-            <div className = "carousel-wrapper">
-
-              <button className="arrow" onClick = {() => goToNextOrPrev(2)}>&lt;</button>
-                  
-                  <article className = "box">
-                    <img src = {imgB2} alt = "copertina" />
-                    <div className="card-wrapper">
-                      {cards.map((card, index) => (
-                        <div
-                          key={card.id}
-                          className={`card ${index === activeIndex2 ? 'activeCardCarousell' : 'hiddenCardCarousell'} `}
-                        >
-                          <h3>{card.title}</h3>
-                          <p>{card.content}</p>
-
-                            <Link>
-                              <a href="#" className="HomeAncore"> scopri </a>
-                            </Link>
-                        </div>
-                      ))}
-                    </div>
-                  </article>
-
-              <button className="arrow" onClick = {() => goToNextOrPrev(2, 'next')}>&gt;</button>
-            </div>
-
-            <button id="giraPagina" onClick = {() => handleGiraPagina(2)}>Pagina precedente</button>
-          </div>
-        </div>
-      </section>
-
-      <section id = "section4">
-        <div id='HomeDiv3'>
-          
-          <div className={animateDiv3 ? "divVisible" : "d-none"}>
-
-            <p className="HomeDivParagrafi">
-              In ogni epoca 🕰️ le persone pensavano di vivere nell'epoca moderna, ma con il passare del tempo, man mano che la storia dell'uomo avanzava, si sono attribuiti nuovi nomi alle epoche passate 🏛️. 
-              Ogni epoca riceve il suo nome in base a eventi incredibili o invenzioni uniche. L'attuale epoca potrebbe essere solo una tappa, mentre le future potrebbero portare miglioramenti o sfide 🌅🌑. 
-              Tuttavia, come dimostra la storia 📚, anche nelle epoche più buie 🌑 emergono nuovi talenti 🎯 e invenzioni sorprendenti 🚀. È fondamentale continuare ad andare avanti, imparando dal passato e preparando il futuro 🌟.              
-              <Link>
-                <a href="#" className="HomeAncore">Vuoi scoprire quali epoche hanno segnato in modo indelebile la storia dell'uomo?</a>
-              </Link>
-            </p>
-
-            <button id="giraPagina" onClick = {() => handleGiraPagina(3)}>Pagina sucessiva</button>
-          </div> 
-
-          <div className={animateCarosell3 ? "carousellVisible" : "d-none"}>
-            <div className = "carousel-wrapper">
-
-              <button className="arrow" onClick = {() => goToNextOrPrev(3)}>&lt;</button>
-                  
-                  <article className = "box">
-                    <img src = {imgB2} alt = "copertina" />
-                    <div className="card-wrapper">
-                      {cards.map((card, index) => (
-                        <div
-                          key={card.id}
-                          className={`card ${index === activeIndex3 ? 'activeCardCarousell' : 'hiddenCardCarousell'} `}
-                        >
-                          <h3>{card.title}</h3>
-                          <p>{card.content}</p>
-
-                            <Link>
-                              <a href="#" className="HomeAncore"> scopri </a>
-                            </Link>
-                        </div>
-                      ))}
-                    </div>
-                  </article>
-
-              <button className="arrow" onClick = {() => goToNextOrPrev(3, 'next')}>&gt;</button>
-            </div>
-
-            <button id="giraPagina" onClick = {() => handleGiraPagina(3)}>Pagina precedente</button>
-          </div>
-        </div>
-      </section>
-
-      {/* 
-      <div id='HomeDiv4'>
-        
-        <div>
-          <p className = "HomeDivParagrafi">
-            Così come ci sono diversi continenti 🌎🌍🌏, anche la storia dell'uomo si dipana in modi unici e diversi a seconda delle regioni 🗺️. 
-            Ogni continente ha la sua propria storia 📝, ricca di culture, eventi e innovazioni che hanno contribuito a plasmare il mondo 🌍. 
-            Dalle grandi civiltà dell'Antico Egitto e della Cina 🏺, alle rivoluzioni e scoperte in Europa 🏰, alle tradizioni e sfide delle Americhe 🇺🇸🇧🇷, ogni continente ha il suo ruolo speciale nella grande narrazione dell'umanità 🌟. 
-            Comprendere la storia dell'uomo nei diversi continenti ci aiuta a vedere il quadro completo e a valorizzare la diversità e le connessioni tra le varie culture.      
-            <Link>
-              <a href="#" className="HomeAncore">Vuoi approfondire come i diversi continenti hanno contribuito a scrivere la storia dell'uomo?</a>
-            </Link>
-          </p>
-        </div>*/}
-        {/* inserire in un secondo momento il carosello con i contenuti giusti 
-      </div>*/}
     </>
   );
 };
