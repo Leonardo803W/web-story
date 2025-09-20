@@ -1,25 +1,22 @@
-import imgDivulgatori from '../img/divulgatori/alessandro barbero.webp'
-
+import imgDivulgatori1 from '../img/divulgatori/alessandro barbero.webp'
+import imgDivulgatori2 from '../img/divulgatori/roberto-giacobbo.jpg'
+import imgDivulgatori3 from '../img/divulgatori/ulisse-il-piacere-della-scoperta-alberto-angela-rai1-1.jpg'
 const Sperimento2 = () => {
 
     return(
         <>
-        <section id = 'section3'>
-                <div id = 'introDivulgatori'>
-                    <p id = 'introDivulgatoriParagrafo'>
-                            La storia non sarebbe mai conosciuta se non fosse grazie a chi la divulga,
-                            di divulgatori ve ne sono diversi, ognuno con le proprie abilita e competenze!                        
-                    </p>
+            <section id = 'section3'>
+                <p id = 'introDivulgatori'>
+                        La storia non sarebbe mai conosciuta se non fosse grazie a chi la divulga,
+                        di divulgatori ve ne sono diversi, ognuno con le proprie abilita e competenze!                        
+                </p>
 
-                    <button id = 'introButtonDivulgatori'>clicc qui per vederne altri!</button>
-                </div>
-                
                 <section id = 'groupCardDivulgatori'>
 
 
 
                     <div className = "card">
-                        <img src = {imgDivulgatori} alt="" className = 'cardImage'/>
+                        <img src = {imgDivulgatori1} alt="" className = 'cardImage'/>
                         <hr className=' m-1 text-light'/>
                         <div className = 'groupContent'>
                             <h5 className = 'title'>Alessandro Barbero</h5>
@@ -29,35 +26,27 @@ const Sperimento2 = () => {
                     </div>
 
                     <div className = "card">
-                        <img src = {imgDivulgatori} alt="" className = 'cardImage'/>
+                        <img src = {imgDivulgatori2} alt="" className = 'cardImage'/>
                         <hr className=' m-1 text-light'/>
                         <div className = 'groupContent'>
-                            <h5 className = 'title'>Alessandro Barbero</h5>
+                            <h5 className = 'title'>Roberto Giacobbo</h5>
                             <p className = 'description'>Un divulgatore molto noto e altrettanto adorato dai spettatori</p>
                             <button className = 'cardButton'>scopri di piu</button>
                         </div>
                     </div>
 
                     <div className = "card">
-                        <img src = {imgDivulgatori} alt="" className = 'cardImage'/>
+                        <img src = {imgDivulgatori3} alt="" className = 'cardImage'/>
                         <hr className=' m-1 text-light'/>
                         <div className = 'groupContent'>
-                            <h5 className = 'title'>Alessandro Barbero</h5>
-                            <p className = 'description'>Un divulgatore molto noto e altrettanto adorato dai spettatori</p>
-                            <button className = 'cardButton'>scopri di piu</button>
-                        </div>
-                    </div>
-
-                    <div className = "card">
-                        <img src = {imgDivulgatori} alt="" className = 'cardImage'/>
-                        <hr className=' m-1 text-light'/>
-                        <div className = 'groupContent'>
-                            <h5 className = 'title'>Alessandro Barbero</h5>
+                            <h5 className = 'title'>Alberto Angela</h5>
                             <p className = 'description'>Un divulgatore molto noto e altrettanto adorato dai spettatori</p>
                             <button className = 'cardButton'>scopri di piu</button>
                         </div>
                     </div>
                 </section>
+
+                <button id = 'introButtonDivulgatori'>clicc qui per vederne altri!</button>
             </section>
         </>
     )

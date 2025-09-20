@@ -70,13 +70,18 @@ const GlobalNavbar = () => {
           <Offcanvas.Title>Sezioni disponibili:</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body id = "offCanvsBody">
-            <p>
-              <Link to = 'SchermataBattaglie'>Battaglie</Link>
-            </p>
-
-            <p>
-              <Link to = "#">Invenzioni</Link>
-            </p>
+              <p className = "enter">
+                <Link to = 'SchermataBattaglie'>Battaglie</Link>
+              </p>
+              <p className = "notEnter">
+                <Link to = "#">Invenzioni</Link>
+              </p>
+              <p className = "notEnter">
+                <Link to = "#">Epoche</Link>
+              </p>
+              <p className = "notEnter">
+                <Link to = "#">Continenti</Link>
+              </p>
         </Offcanvas.Body>
       </Offcanvas>
 
