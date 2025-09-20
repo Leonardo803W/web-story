@@ -144,14 +144,14 @@
 }
 
 .HomeDivParagrafi{
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem;
-  background-color: white;
-  border-radius: 3rem;
-  width: 90%;
-  font-size: x-small;
-  border-bottom: #51515173 4px solid;
+margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    background-color: #ffffff61;
+    border-radius: 3rem;
+    width: 90%;
+    font-size: small;
+    box-shadow: 0px 0px 11px 6px;
 }
 
 .contenuto img{
@@ -199,6 +199,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+      overflow: hidden;
 }
 
 .box img{
@@ -329,7 +330,8 @@
 
 #HomeDiv1{
   background-image: url('../src/img/battaglie.avif');
-  background-size: contain;
+    background-size: 40rem 27rem;
+    background-position-x: -16rem;
 }
 
 .group-paragrafer{
@@ -604,8 +606,9 @@
 
 .sezionePrincipale h4{
   margin-bottom: 3rem;
-  font-weight: 700;
   color: white;
+  font-size: smaller;
+  font-weight: 900;
 }
 
 .sezionePrincipale p{
@@ -810,4 +813,226 @@ margin-top: 1rem;
     border-radius: 2rem;
     border-color: red;
     background-color: #ffffff66;
+}
+
+/*css per componente Sperimento2PerTelefono*/
+
+#contenutoSperimentotelefono {
+    background-image: url(./img/divulgatori/terra.jpg);
+    align-items: center;
+    background-size: 44rem 28rem;
+    background-repeat: no-repeat;
+    background-position-x: -10rem;
+    background-position-y: 0rem;
+}
+
+.sezionePrincipaletelefono {
+    width: 100%;
+    padding: 1rem;
+    animation: sezionePrincipaletelefono 1s ease;
+    height: 16rem;
+}
+
+@keyframes sezionePrincipaletelefono {
+  0%{
+    height: 6rem;
+  }
+  100%{
+    height: 16rem;
+  }
+}
+
+.sezionePrincipaletelefono h4 {
+  margin: 0;
+    padding: 1rem;
+    color: white;
+    font-size: smaller;
+    font-weight: 900;
+}
+
+.sezionePrincipaletelefono p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #ffffff96;
+    border-radius: 2rem;
+    font-size: small;
+    animation: sezionePrincipaletelefonoParagrafo 2s ease;
+}
+
+@keyframes sezionePrincipaletelefonoParagrafo {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+.sezionePrincipaletelefonoActive{
+  animation: sezionePrincipaletelefonoActive 1s ease;
+  height: 5rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+@keyframes sezionePrincipaletelefonoActive {
+  0%{
+    height: 18rem;
+  }
+  100%{
+    height: 5rem;
+  }
+}
+
+.sezionePrincipaletelefonoActive h4{
+    margin: 0;
+    padding: 1rem;
+    color: white;
+    font-size: smaller;
+    font-weight: 900;
+}
+
+.sezionePrincipaletelefonoActive p{
+  display: none;
+}
+
+#multiSezioneTelefono {
+    width: 100%;
+}
+
+.articoliTelefono {
+    width: 100%;
+    color: white;
+    animation: articoliTelefono 1s ease;
+}
+
+@keyframes articoliTelefono {
+  0%{
+    height: 20rem;
+  }
+  100%{
+    height: 4rem;
+  }
+}
+
+.articoliTelefonoActive{
+  animation: articoliTelefonoActive 1s ease;
+  height: 20rem;
+  color: white;
+}
+
+@keyframes articoliTelefonoActive {
+  0%{
+    height: 4rem;
+  }
+  100%{
+    height: 20rem;
+  }
+}
+
+.articoloTitleTelefono {
+    margin: 0;
+    padding: 0.1rem;
+    font-weight: 900;
+    width: 50%;
+    color: black;
+    background-color: #ffffff47;
+    border-radius: 0rem 3rem 3rem 0rem;
+}
+
+.articoloTitleTelefonoActive {
+    margin: 1rem;
+    padding: 0.5rem;
+    font-weight: 900;
+    width: 100%;
+    color: black;
+    background-color: #ffffff47;
+    border-radius: 3rem 0rem 3rem 0rem;
+    text-align: center;
+    animation: articoloTitleTelefonoActive 1s ease-out;
+}
+
+@keyframes articoloTitleTelefonoActive {
+  0%{
+    margin: 0;
+    padding: 0.1rem;
+    border-radius: 0rem 3rem 3rem 0rem;
+    text-align: left;
+    width: 50%;
+  }
+  100%{
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 3rem 0rem 3rem 0rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.articoloIntro{
+display: flex;
+    align-items: center;
+    box-shadow: 0px -3px 10px 1px;
+    width: 100%;
+    justify-content: space-between;
+    height: 4rem;
+}
+
+.articoloIntroActive{
+    display: flex;
+    align-items: center;
+        box-shadow: 0px 0px 15px 4px;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: flex-direction 1s ease-out;
+}
+
+.articoloButtonTelefono {
+    margin-right: 2rem;
+    width: 30%;
+    border-radius: 1rem;
+    border-color: #ff5c5c;
+    background-color: #9dbef94f;
+    padding: 0.5rem;
+    color: #000000;
+    box-shadow: 0px 2px 21px 3px;
+}
+
+.articoloTestoTelefonoActive{
+  margin: 0.5rem;
+  padding: 1rem;
+  background-color: #ffffff78;
+  border-radius: 1rem;
+  animation: articoloTestoTelefonoButton 2s ease-out;
+  color: black;
+}
+
+@keyframes articoloTestoTelefonoButton {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.articoloTelefonoGroupButtonActive{
+      margin: 2rem;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    animation: articoloTestoTelefonoButton 2s ease-out;
+}
+
+.singoloButtonTelefono{
+    width: 35%;
+    border-radius: 1rem;
+    border-color: #ff5c5c;
+    background-color: #9dbef94f;
+    padding: 0.5rem;
+    color: #000000;
+    box-shadow: 0px 2px 21px 3px;
 }

@@ -165,9 +165,9 @@ const MainHome = () => {
               La storia dell'uomo è stata impregnata di battaglie ⚔️, spesso anche piccole battaglie possono decidere il destino di un paese. 
               Ma certe battaglie hanno influenzato profondamente la storia che conosciamo 📜. 
               Alcune erano prevedibili nella loro direzione, mentre altre non si poteva mai immaginare come sarebbe andata, rendendo difficile anche solo immaginare come sarebbe stata diversa la storia 🌟. 
-              <Link>
-                <a href="#" className="HomeAncore">Vuoi scoprire quali di queste battaglie hanno avuto un impatto così grande sulla storia dell'uomo?</a>
-              </Link>
+
+                <button className="HomeAncore">Vuoi scoprire quali di queste battaglie hanno avuto un impatto così grande sulla storia dell'uomo?</button>
+
             </p>
 
             <button id="giraPagina" onClick = {() => handleGiraPagina(1)}>Pagina successiva</button>
