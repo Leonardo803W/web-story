@@ -1,6 +1,6 @@
-/*GlobalNavbar*/
+/*CSS per GlobalNavbar*/
 
-#sectiopnNavbar{
+#sectionNavbar{
   margin-bottom: 6rem;
 }
 
@@ -13,7 +13,7 @@
   background-color: black;
   align-items: center;
   width: 100%;
-  border-bottom: #E91E63 4px solid;
+  border-bottom: white 4px solid;
   background-size: 426px 167px;
   height: 6rem;
 }
@@ -24,11 +24,27 @@
   border-color: unset;
 }
 
-.notEnter{
-  cursor: not-allowed;
+#offCansHeader{
+  background-color: #453d3d;
+  color: white;
 }
 
-.notEnter a{
+#offCanvsBody{
+  background: linear-gradient(137deg, rgba(61, 61, 94, 1) 0%,  rgba(136, 207, 122, 1) 32%, rgba(65, 166, 135, 1) 63%, rgba(0, 212, 255, 1) 100%);
+}
+
+#offCanvsBody p{
+  margin: 0;
+  padding: 1rem;
+  border-bottom: black 1px solid;
+}
+
+#offCanvsBody a{
+  color: white;
+  text-decoration: unset;
+}
+
+.notEnter{
   cursor: not-allowed;
 }
 
@@ -58,26 +74,6 @@
   border-radius: 10px;
   padding: 1rem;
   animation: list 0.1s ease-in-out;
-}
-
-#offCansHeader{
-  background-color: #453d3d;
-  color: white;
-}
-
-#offCanvsBody{
-  background: linear-gradient(137deg, rgba(61, 61, 94, 1) 0%,  rgba(136, 207, 122, 1) 32%, rgba(65, 166, 135, 1) 63%, rgba(0, 212, 255, 1) 100%);
-}
-
-#offCanvsBody p{
-  margin: 0;
-  padding: 1rem;
-  border-bottom: black 1px solid;
-}
-
-#offCanvsBody a{
-  color: white;
-  text-decoration: unset;
 }
 
 /*animazioni*/
@@ -131,210 +127,23 @@
   }
 }
 
-/*MainHome*/
+/*CSS per MainHome*/
 
-/*classi comuni a tutte le section*/
-
-#HomeDiv1, #HomeDiv2, #HomeDiv3, #HomeDiv4{
-  text-align: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-top: #00ff34 5px solid;
-  border-bottom: #00ff34 5px solid;
-}
-
-.HomeDivParagrafi{
-margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    background-color: #ffffff61;
-    border-radius: 3rem;
-    width: 90%;
-    font-size: small;
-    box-shadow: 0px 0px 11px 6px;
-}
-
-.contenuto img{
-  width: 100%;
-  height: 12rem;
-  padding: 0.5rem;
-  background-color: black;
-}
-
-.HomeAncore{
-  display: block;
-  border: #ffffff 1px solid;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  color: black;
-  border-radius: 2rem;
-  border-color: red;
-  background-color: #dfdfdf8a;
-}
-
-.HomeAncore:hover{
-  background-color: red;
-  box-shadow: 0px 0px 15px 1px;
-}
-
-#giraPagina{
-  padding: 0.5rem;
-  width: 70%;
-  border-radius: 3rem;
-  border: unset;
-  margin-top: 1rem;
-}
-
-#giraPagina:hover{
-  background-color: red;
-  color: white;
-  box-shadow: 0px 5px 9px 3px;
-}
-
-.divVisible{
-  animation: visibleDiv 1s ease-in;
-}
-
-.box{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.box img{
-  width: 80%;
-  position: absolute;
-  border-radius: 2rem;
-  box-shadow: 0px -3px 4px 5px;
-  color: white;
-  left: 2rem;
-  right: auto;
-}
-
-.carousellVisible{
-  animation: VisibleCarousell 1s ease-out;
-}
-
-.carousel-wrapper {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-      overflow: hidden;
-}
-
-.card-wrapper {
-  display: flex;
-  height: 22rem;
-  width: 100%;
-  margin-top: 2rem;
-}
-
-.cacardCarosellord {
-  width: 90%;
-}
-
-.cardCarosello h3{
-  padding: 0.5rem;
-  margin: 0.5rem;
-  font-size: larger;
-}
-
-.cardCarosello p{
-  padding: 0.5rem;
-  margin: 0.5rem;
-  font-size: small;
-}
-
-.notActive{
-  opacity: 0.5;
-  width: 40%;
-  transform: skewX(10deg);
-  transition: transform 0.5s ease;
-}
-
-.activeCardCarousell{
-    margin: 1rem;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-top: 6rem;
-    box-shadow: 0px 5px 19px 5px;
-    background-color: #ffffffa3;
-    color: #000000;
-    border-radius: 2rem;
-}
-
-.hiddenCardCarousell {
-  pointer-events: none;
-  width: 0;
+.spaziatoriHomeMain{
   margin: 0;
-  padding: 0;
+  padding: 2px;
   opacity: 0;
 }
 
-.arrow {
-  color: #a53737;
-  background-color: #ffffff75;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  border-radius: 1rem;
-  border-color: #ff5a5a;
-  font-weight: 400;
-}
+/*section1*/*/
 
-.progress-bar {
-  width: 95%;
-  border-radius: 1rem;
-  margin: 0.5rem;
-  height: 0.5rem;
-}
-
-.progress {
-  height: 100%;
-  background: #4caf50;
-  transition: width 0.3s ease-in;
-}
-
-.carousel-container h3{
-  margin: 0;
-  padding: 1rem;
-  font-size: medium;
-}
-
-.carousel-container p{
-  margin: 0;
-  font-size: small;
-}
-
-/*animation*/
-
-@keyframes visibleDiv {
-  0%{
-    opacity: 0;
-    transform: rotateY(180deg);
-  }
-  100%{
-    opacity: 1;
-    transform: rotateY(0deg);
-  }
-}
-
-@keyframes VisibleCarousell {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
-/*section1*/
-
-#HomeDiv1{
+#section1{
   background-image: url('../src/img/battaglie.avif');
-    background-size: 40rem 27rem;
-    background-position-x: -16rem;
+  background-size: 40rem 27rem;
+  background-position-x: -16rem;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .group-paragrafer{
@@ -363,13 +172,13 @@ margin-left: auto;
   font-size: small;
 }
 
-.visible {
+.visibleParagrafoSection1 {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 1s ease, transform 1s ease;
 }
 
-.hidden {
+.hiddenParagrafoSection1 {
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 1s ease, transform 1s ease;
@@ -421,7 +230,7 @@ margin-left: auto;
   animation: slideImgDestra 2s ease-in-out;
 }
 
-/*animazioni*/
+/*animazioni Section1*/
 
 @keyframes slideImgDestra {
   0% {
@@ -441,14 +250,9 @@ margin-left: auto;
   }
 }
 
-/*media query per tablet*/
+/*media query per tablet Section1*/
 
 @media (min-width: 426px){
-
-  #para1, #para2, #para3, #para4, #para5 {
-      padding: 2rem;
-      margin-top: 0;
-  }
 
   #slide-img-sinistra img{
     width: 40%;
@@ -462,7 +266,7 @@ margin-left: auto;
     animation: slideImgDestra 2s ease-in-out;
   }
 
-  /*animazioni per tablet*/
+  /*animazioni per tablet Section1*/
 
   @keyframes slideImgDestra {
     0% {
@@ -485,25 +289,695 @@ margin-left: auto;
 
 /*section2*/
 
-#HomeDiv2{
-  background-image: url('../src/img/invenzioni.jpg');
-  background-size: contain;
+#section2{
+  background-image: url(./img/battaglie.avif);
+  background-size: 50rem 29rem;
+  background-position-x: -25rem;
 }
 
-/*section3*/
-
-#HomeDiv3{
-  background-image: url('../src/img/epoche.jpg');
-  background-size: contain;
+#HomeSection2Div{
+  padding: 1rem;
+  text-align: center;
 }
 
-/*section4*/
-
-#HomeDiv4{
-  background-image: url('../src/img/continenti.jpg');
-  background-size: contain;
+.divVisible{
+  animation: visibleDiv 1s ease-in;
 }
 
+#HomeSection2Paragrafo{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  background-color: #ffffff61;
+  border-radius: 3rem;
+  width: 90%;
+  font-size: small;
+  box-shadow: 0px 0px 11px 6px;
+}
+
+.HomeAncoreSection2{
+  display: block;
+  border: #ffffff 1px solid;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  color: black;
+  border-radius: 2rem;
+  border-color: red;
+  background-color: #dfdfdf8a;
+}
+
+.HomeAncoreSection2:hover{
+  background-color: red;
+  box-shadow: 0px 0px 15px 1px;
+}
+
+#giraPagina{
+  padding: 0.5rem;
+  width: 70%;
+  border-radius: 3rem;
+  border: unset;
+  margin-top: 1rem;
+}
+
+#giraPagina:hover{
+  background-color: red;
+  color: white;
+  box-shadow: 0px 5px 9px 3px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousellVisible{
+  animation: VisibleCarousell 1s ease-out;
+}
+
+.arrow {
+  color: #a53737;
+  background-color: #ffffff75;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  border-color: #ff5a5a;
+  font-weight: 400;
+}
+
+.box{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box img{
+  width: 80%;
+  position: absolute;
+  border-radius: 2rem;
+  box-shadow: 0px -3px 4px 5px;
+  color: white;
+  left: 2rem;
+  right: auto;
+}
+
+.card-wrapper {
+  display: flex;
+  height: 22rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.cardCarosello {
+  width: 90%;
+}
+
+.cardCarosello h3{
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: larger;
+}
+
+.cardCarosello p{
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: small;
+}
+
+.activeCardCarousellSection2{
+    margin: 1rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 6rem;
+    box-shadow: 0px 5px 19px 5px;
+    background-color: #ffffffa3;
+    color: #000000;
+    border-radius: 2rem;
+}
+
+.hiddenCardCarousellSection2 {
+  pointer-events: none;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+/*animazioni Section2*/
+
+@keyframes visibleDiv {
+  0%{
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+  100%{
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes VisibleCarousell {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/*css Section3TelefonoETablet*/
+
+#Section3TelefonoETablet {
+  background-image: url(./img/divulgatori/terra.jpg);
+  background-size: 44rem 28rem;
+  background-repeat: no-repeat;
+  background-position-x: -14rem;
+  background-position-y: 0rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.divSection3TelefonoETablet {
+    width: 150%;
+    padding: 1rem;
+    animation: divSection3TelefonoETablet 3s ease;
+}
+
+.divSection3TelefonoETabletActive{
+  width: 10%;
+  padding: 0;
+  animation: divSection3TelefonoETabletActive 1s ease;
+}
+
+.divSection3TelefonoETabletH4{
+  margin: 0;
+  padding: 1rem;
+  color: white;
+  font-size: smaller;
+  font-weight: 900;
+  animation: divSection3TelefonoETabletH4P 3s ease;
+}
+
+.divSection3TelefonoETabletP{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #ffffff96;
+  border-radius: 2rem;
+  font-size: xx-small;
+  animation: divSection3TelefonoETabletH4P 3s ease;
+}
+
+.divSection3TelefonoETabletH4Active, .divSection3TelefonoETabletPActive{
+ display: none;
+}
+
+.articoliTelefonoETablet {
+  height: 6rem;
+  animation: articoliTelefonoETablet 1s ease;
+}
+
+.articoliTelefonoETabletActive{
+  height: 14rem;
+  animation: articoliTelefonoETabletActive 1s ease;
+}
+
+#articoloTelefonoETablet1{
+  background-image: url(./img/invenzioni.jpg);
+  background-size: cover;
+}
+
+#articoloTelefonoETablet2{
+  background-image: url(./img/continenti.jpg);
+  background-size: cover;
+}
+
+#articoloTelefonoETablet3{
+  background-image: url(./img/epoche.jpg);
+  background-size: cover;
+}
+
+.articoloIntroTelefonoETablet{
+  align-items: center;
+  box-shadow: 4px 7px 20px 0px;
+  width: 100%;
+  animation: articoloIntroTelefonoETablet 1s ease;
+  color: white;
+  height: 6rem;
+}
+
+.articoloIntroTelefonoETabletActive{
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 15px 4px;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: flex-direction 1s ease-out;
+  animation: articoloIntroTelefonoETabletActive 1s ease;
+}
+
+.articoloTitleTelefonoETablet {
+  padding: 0.1rem;
+  font-weight: 900;
+  width: 50%;
+  color: black;
+  background-color: #ffffff47;
+  border-radius: 0rem 1rem 1rem 0rem;
+  font-size: x-small;
+}
+
+.articoloTitleTelefonoETabletActive {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-weight: 900;
+  width: 80%;
+  color: black;
+  background-color: #ffffff47;
+  border-radius: 3rem 0rem 3rem 0rem;
+  text-align: center;
+  font-size: x-small;
+  animation: articoloTitleTelefonoETabletActive 1s ease-out;
+}
+
+.articoloButtonTelefonoETablet {
+  border-radius: 1rem;
+  border-color: #ff5c5c;
+  background-color: #9dbef94f;
+  color: #000000;
+  box-shadow: 0px 2px 21px 3px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  font-size: x-small;
+  margin-top: 1rem;
+}
+
+.articoloTestoTelefonoETabletActive{
+  padding: 1rem;
+  background-color: #ffffff78;
+  border-radius: 1rem;
+  color: black;
+  font-size: x-small;
+  width: 80%;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  transition: opacity 2s ease-out;
+}
+
+.articoloTelefonoETabletGroupButtonActive{
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  animation: articoloTestoTelefonoButton 2s ease-out;
+}
+
+.singoloButtonTelefonoETablet{
+  width: 35%;
+  border-radius: 1rem;
+  border-color: #ff5c5c;
+  background-color: #9dbef94f;
+  padding: 0.5rem;
+  color: #000000;
+  box-shadow: 0px 2px 21px 3px;
+}
+
+/*animazioni Section3TelefonoETablet*/
+
+@keyframes divSection3TelefonoETablet {
+  0%{
+    width: 10%;
+    padding: 0;
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    width: 150%;
+    padding: 1rem;
+  }
+}
+
+@keyframes divSection3TelefonoETabletActive {
+  0%{
+    width: 10%;
+    padding: 0;
+  }
+  100%{
+    width: 150%;
+    padding: 1rem;
+  }
+}
+
+@keyframes divSection3TelefonoETabletActive {
+  0%{
+    width: 150%;
+    padding: 1rem;
+  }
+  100%{
+    width: 0%;
+    padding: 0%;
+  }
+}
+
+@keyframes divSection3TelefonoETabletParagrafo {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes articoliTelefonoETablet {
+  0%{
+    height: 16rem;
+  }
+  100%{
+    height: 6rem;
+  }
+}
+
+@keyframes articoliTelefonoETabletActive {
+  0%{
+    height: 6rem;
+  }
+  100%{
+    height: 14rem;
+  }
+}
+
+@keyframes articoloTitleTelefonoETabletActive {
+  0%{
+    margin: 0;
+    padding: 0.1rem;
+    border-radius: 0rem 3rem 3rem 0rem;
+    text-align: left;
+    width: 50%;
+  }
+  100%{
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 3rem 0rem 3rem 0rem;
+    text-align: center;
+    width: 80%;
+  }
+}
+
+/*media query per non visualizzare il componente dal laptop in su*/
+
+@media (min-width: 769px) {
+
+  #Section3TelefonoETablet {
+    display: none;
+  }
+}
+
+/*css Section3LaptopEDesktop*/
+
+#section3LaptopEDesktop{
+  display: none;
+}
+
+/*media query per visualizzare il componente dal laptop in su*/
+
+@media (min-width: 769px) {
+
+  #section3LaptopEDesktop{
+    background-image: url(./img/divulgatori/terra.jpg);
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position-y: -11rem;
+  }
+
+  .divSection3LaptopEDesktop{
+    width: 50%;
+    padding: 1rem;
+    animation: divSection3LaptopEDesktop 0.5s ease-out;
+  }
+
+  @keyframes divSection3LaptopEDesktop {
+    0%{
+      width: 0%;
+      padding: 0rem;
+      color: white;
+      opacity: 0;
+    }
+    50%{
+      opacity: 0;
+    }
+    100%{
+      width: 50%;
+      padding: 1rem;
+      color: #36f479;
+      opacity: 1;
+    }
+  }
+
+  .divSection3LaptopEDesktop h4{
+    margin-bottom: 3rem;
+    color: white;
+    font-size: smaller;
+    font-weight: 900;
+  }
+
+  .divSection3LaptopEDesktop p{
+    margin: 3rem;
+    padding: 1rem;
+    background-color: #ffffff96;
+    border-radius: 2rem;
+  }
+
+  .divSection3LaptopEDesktopActive{
+    width: 0%;
+    opacity: 0;
+    padding: 0rem;
+    animation: divSection3LaptopEDesktopActive 1s ease-out;
+  }
+
+  @keyframes divSection3LaptopEDesktopActive {
+    0%{
+      width: 50%;
+      padding: 1rem;
+      color: #36f479;
+      opacity: 1;
+    }
+    50%{
+      opacity: 0;
+    }
+    100%{
+      width: 0%;
+      padding: 0rem;
+      color: white;
+    }
+  }
+
+  #multiSezioneLaptopEDesktop{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    transform: skewX(20deg);
+    transition: width 1s ease-in;
+  }
+
+  #multiSezioneLaptopEDesktopActive{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transform: skewX(20deg);
+    transition: width 1s ease;
+  }
+
+  .articoliLaptopEDesktop{
+    width: 40%;
+    position: relative;
+    left: 4rem;
+    color: white;
+    transition: width 0.5s ease-in;
+  }
+
+  .articoloLaptopEDesktopActive{
+    width: 250%;
+    position: relative;
+    left: 4rem;
+    color: white;
+    transition: width 1s ease-out;
+  }
+
+  #articoloLaptopEDesktop1{
+    background-image: url(./img/invenzioni.jpg);
+    background-size: cover;
+  }
+
+  #articoloLaptopEDesktop2{
+    background-image: url(./img/continenti.jpg);
+    background-size: cover;
+  }
+
+  #articoloLaptopEDesktop3{
+    background-image: url(./img/epoche.jpg);
+    background-size: cover;
+  }
+
+  .articoloTitleLaptopEDesktop{
+    margin: 0;
+    padding: 0.5rem;
+    font-weight: 900;
+    box-shadow: 0px 2px 10px 1px;
+  }
+
+  .articoloTitleLaptopEDesktopActive{
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-weight: 900;
+    box-shadow: 0px 2px 10px 1px;
+  }
+
+  .articoloContenutoLaptopEDesktop{
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    font-weight: 500;
+    background-color: #ffffffad;
+    color: black;
+    border-radius: 2rem;
+    font-size: small;
+    height: 10rem;
+  }
+
+  .articoloContenutoLaptopEDesktopActive{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    padding: 2rem;
+    font-weight: 500;
+    height: 10rem;
+  }
+
+  .articoloButtonLaptopEDesktop{
+    display: block;
+    margin: 1rem;
+    width: 50%;
+    border-radius: 1rem;
+    border-color: #ff5c5c;
+    background-color: #9dbef94f;
+    padding: 0.5rem;
+    color: #ffffff;
+    box-shadow: 0px 3px 6px 5px;
+  }
+
+  .articoloButtonLaptopEDesktopActive{
+    margin-top: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 1rem;
+    border-color: #ff5c5c;
+    background-color: #9dbef94f;
+    padding: 0.5rem;
+    color: #ffffff;
+    box-shadow: 0px 3px 6px 5px;
+  }
+}
+
+/*css section4*/
+
+#section4{
+  background-image: url(./img/divulgatori/shutterstock_781927855.jpg);
+  background-size: auto;
+  text-align: center;
+}
+
+#introDivulgatori{
+  color: black;
+  padding: 0.5rem;
+  background-color: #ffffffbf;
+  border-radius: 2rem;
+  font-size: small;
+  text-align: center;
+}
+
+#groupCardDivulgatori{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card{
+  width: 90%;
+  margin: 1rem;
+  box-shadow: 0px 10px 20px 5px;
+  text-align: center;
+}
+
+.cardImage{
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: black;
+}
+
+.groupContent{
+  background-image: url(./img/divulgatori/vecchio-libro-aperto-per-halloween_135176-343.jpg);
+  background-size: 20rem 21rem;
+  background-position-y: -4rem;
+  background-position-x: -1rem;
+  color: #000000;
+}
+
+.title{
+  margin: 0;
+  padding: 1rem;
+}
+
+.description{
+  margin: 0;
+  padding: 1rem;
+}
+
+.cardButton{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  border-color: red;
+  background-color: #ffffff66;
+}
+
+#introButtonDivulgatori{
+  width: 70%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  border-color: red;
+  background-color: #92e5fd66;
+  color: white;
+  box-shadow: 0px 1px 12px 5px;
+}
+
+/*css per componenti non finiti*/
 /*ComponenteSingolo*/
 
 .groupCapitoliBattle{
@@ -548,492 +1022,4 @@ margin-left: auto;
   margin: 1rem;
   border-radius: 5rem;
   text-align: center;
-}
-
-/*css per componente sperimento*/
-#contenutoSperimento{
-  background-image: url(./img/divulgatori/terra.jpg);
-  display: flex;
-  align-items: center;
-  background-size: cover;
-  background-position-y: -11rem;
-}
-
-.sezionePrincipale{
-  width: 50%;
-  padding: 1rem;
-  animation: sezionePrincipale 0.5s ease-out;
-}
-
-@keyframes sezionePrincipale {
-  0%{
-    width: 0%;
-    padding: 0rem;
-    color: white;
-    opacity: 0;
-  }
-  50%{
-    opacity: 0;
-  }
-  100%{
-    width: 50%;
-    padding: 1rem;
-    color: #36f479;
-    opacity: 1;
-  }
-}
-
-.sezionePrincipaleActive{
-  width: 0%;
-  opacity: 0;
-  padding: 0rem;
-  animation: sezionePrincipaleActive 1s ease-out;
-}
-
-@keyframes sezionePrincipaleActive {
-  0%{
-    width: 50%;
-    padding: 1rem;
-    color: #36f479;
-    opacity: 1;
-  }
-  50%{
-    opacity: 0;
-  }
-  100%{
-    width: 0%;
-    padding: 0rem;
-    color: white;
-  }
-}
-
-.sezionePrincipale h4{
-  margin-bottom: 3rem;
-  color: white;
-  font-size: smaller;
-  font-weight: 900;
-}
-
-.sezionePrincipale p{
-  margin: 3rem;
-  padding: 1rem;
-  background-color: #ffffff96;
-  border-radius: 2rem;
-}
-
-#multiSezione{
-  display: flex;
-  width: 50%;
-  height: 100%;
-  transform: skewX(20deg);
-  transition: width 1s ease-in;
-}
-
-#multiSezioneActive{
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transform: skewX(20deg);
-  transition: width 1s ease;
-}
-
-.articoli{
-  width: 40%;
-  position: relative;
-  left: 4rem;
-  color: white;
-  transition: width 0.5s ease-in;
-}
-
-.articoloActive{
-  width: 250%;
-  position: relative;
-  left: 4rem;
-  color: white;
-  transition: width 1s ease-out;
-}
-
-#articolo1{
-  background-image: url(./img/invenzioni.jpg);
-  background-size: cover;
-}
-
-#articolo2{
-  background-image: url(./img/continenti.jpg);
-  background-size: cover;
-}
-
-#articolo3{
-  background-image: url(./img/epoche.jpg);
-  background-size: cover;
-}
-
-.articoloTitle{
-  margin: 0;
-  padding: 0.5rem;
-  font-weight: 900;
-  box-shadow: 0px 2px 10px 1px;
-}
-
-.articoloContenuto{
-margin-top: 1rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    font-weight: 500;
-    background-color: #ffffffad;
-    color: black;
-    border-radius: 2rem;
-    font-size: small;
-    height: 10rem;
-}
-
-.articoloButton{
-  display: block;
-  margin: 1rem;
-  width: 50%;
-  border-radius: 1rem;
-  border-color: #ff5c5c;
-  background-color: #9dbef94f;
-  padding: 0.5rem;
-  color: #ffffff;
-  box-shadow: 0px 3px 6px 5px;
-}
-
-.articoloTitleActive{
-  width: 50%;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  padding: 0.5rem;
-  font-weight: 900;
-  box-shadow: 0px 2px 10px 1px;
-}
-
-.articoloContenutoActive{
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3rem;
-  padding: 2rem;
-  font-weight: 500;
-  height: 10rem;
-}
-
-.articoloButtonActive{
-  margin-top: 2rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  border-radius: 1rem;
-  border-color: #ff5c5c;
-  background-color: #9dbef94f;
-  padding: 0.5rem;
-  color: #ffffff;
-  box-shadow: 0px 3px 6px 5px;
-}
-
-/*css per componente sperimento2*/
-
-#section3{
-    background-image: url(./img/divulgatori/shutterstock_781927855.jpg);
-    background-size: auto;
-    border-top: #00ff34 5px solid;
-    border-bottom: #00ff34 5px solid;
-        text-align: center;
-}
-
-  #introDivulgatori{
-    color: black;
-    padding: 0.5rem;
-    background-color: #ffffffbf;
-    border-radius: 2rem;
-    font-size: small;
-    text-align: center;
-  }
-
-
-  #introButtonDivulgatori{
-    width: 70%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border-radius: 2rem;
-    border-color: red;
-    background-color: #92e5fd66;
-    color: white;
-    box-shadow: 0px 1px 12px 5px;
-  }
-
-#groupCardDivulgatori{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-.card{
-        width: 90%;
-    margin: 1rem;
-    box-shadow: 0px 10px 20px 5px;
-    text-align: center;
-}
-
-.cardImage{
-    border-radius: 1rem;
-    padding: 1rem;
-    background-color: black;
-}
-
-.groupContent{
-  background-image: url(./img/divulgatori/vecchio-libro-aperto-per-halloween_135176-343.jpg);
-    background-size: 20rem 21rem;
-    background-position-y: -4rem;
-    background-position-x: -1rem;
-    color: #000000;
-}
-
-.title{
-    margin: 0;
-    padding: 1rem;
-}
-
-.description{
-    margin: 0;
-    padding: 1rem;
-}
-
-.cardButton{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border-radius: 2rem;
-    border-color: red;
-    background-color: #ffffff66;
-}
-
-/*css per componente Sperimento2PerTelefono*/
-
-#contenutoSperimentotelefono {
-    background-image: url(./img/divulgatori/terra.jpg);
-    align-items: center;
-    background-size: 44rem 28rem;
-    background-repeat: no-repeat;
-    background-position-x: -10rem;
-    background-position-y: 0rem;
-}
-
-.sezionePrincipaletelefono {
-    width: 100%;
-    padding: 1rem;
-    animation: sezionePrincipaletelefono 1s ease;
-    height: 16rem;
-}
-
-@keyframes sezionePrincipaletelefono {
-  0%{
-    height: 6rem;
-  }
-  100%{
-    height: 16rem;
-  }
-}
-
-.sezionePrincipaletelefono h4 {
-  margin: 0;
-    padding: 1rem;
-    color: white;
-    font-size: smaller;
-    font-weight: 900;
-}
-
-.sezionePrincipaletelefono p{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    background-color: #ffffff96;
-    border-radius: 2rem;
-    font-size: small;
-    animation: sezionePrincipaletelefonoParagrafo 2s ease;
-}
-
-@keyframes sezionePrincipaletelefonoParagrafo {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
-
-.sezionePrincipaletelefonoActive{
-  animation: sezionePrincipaletelefonoActive 1s ease;
-  height: 5rem;
-  width: 100%;
-  padding: 1rem;
-}
-
-@keyframes sezionePrincipaletelefonoActive {
-  0%{
-    height: 18rem;
-  }
-  100%{
-    height: 5rem;
-  }
-}
-
-.sezionePrincipaletelefonoActive h4{
-    margin: 0;
-    padding: 1rem;
-    color: white;
-    font-size: smaller;
-    font-weight: 900;
-}
-
-.sezionePrincipaletelefonoActive p{
-  display: none;
-}
-
-#multiSezioneTelefono {
-    width: 100%;
-}
-
-.articoliTelefono {
-    width: 100%;
-    color: white;
-    animation: articoliTelefono 1s ease;
-}
-
-@keyframes articoliTelefono {
-  0%{
-    height: 20rem;
-  }
-  100%{
-    height: 4rem;
-  }
-}
-
-.articoliTelefonoActive{
-  animation: articoliTelefonoActive 1s ease;
-  height: 20rem;
-  color: white;
-}
-
-@keyframes articoliTelefonoActive {
-  0%{
-    height: 4rem;
-  }
-  100%{
-    height: 20rem;
-  }
-}
-
-.articoloTitleTelefono {
-    margin: 0;
-    padding: 0.1rem;
-    font-weight: 900;
-    width: 50%;
-    color: black;
-    background-color: #ffffff47;
-    border-radius: 0rem 3rem 3rem 0rem;
-}
-
-.articoloTitleTelefonoActive {
-    margin: 1rem;
-    padding: 0.5rem;
-    font-weight: 900;
-    width: 100%;
-    color: black;
-    background-color: #ffffff47;
-    border-radius: 3rem 0rem 3rem 0rem;
-    text-align: center;
-    animation: articoloTitleTelefonoActive 1s ease-out;
-}
-
-@keyframes articoloTitleTelefonoActive {
-  0%{
-    margin: 0;
-    padding: 0.1rem;
-    border-radius: 0rem 3rem 3rem 0rem;
-    text-align: left;
-    width: 50%;
-  }
-  100%{
-    margin: 1rem;
-    padding: 0.5rem;
-    border-radius: 3rem 0rem 3rem 0rem;
-    text-align: center;
-    width: 100%;
-  }
-}
-
-.articoloIntro{
-display: flex;
-    align-items: center;
-    box-shadow: 0px -3px 10px 1px;
-    width: 100%;
-    justify-content: space-between;
-    height: 4rem;
-}
-
-.articoloIntroActive{
-    display: flex;
-    align-items: center;
-        box-shadow: 0px 0px 15px 4px;
-    width: 100%;
-    justify-content: space-between;
-    flex-direction: column;
-    transition: flex-direction 1s ease-out;
-}
-
-.articoloButtonTelefono {
-    margin-right: 2rem;
-    width: 30%;
-    border-radius: 1rem;
-    border-color: #ff5c5c;
-    background-color: #9dbef94f;
-    padding: 0.5rem;
-    color: #000000;
-    box-shadow: 0px 2px 21px 3px;
-}
-
-.articoloTestoTelefonoActive{
-  margin: 0.5rem;
-  padding: 1rem;
-  background-color: #ffffff78;
-  border-radius: 1rem;
-  animation: articoloTestoTelefonoButton 2s ease-out;
-  color: black;
-}
-
-@keyframes articoloTestoTelefonoButton {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
-.articoloTelefonoGroupButtonActive{
-      margin: 2rem;
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    animation: articoloTestoTelefonoButton 2s ease-out;
-}
-
-.singoloButtonTelefono{
-    width: 35%;
-    border-radius: 1rem;
-    border-color: #ff5c5c;
-    background-color: #9dbef94f;
-    padding: 0.5rem;
-    color: #000000;
-    box-shadow: 0px 2px 21px 3px;
 }

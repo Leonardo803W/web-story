@@ -1,11 +1,11 @@
 import imgDivulgatori1 from '../img/divulgatori/alessandro barbero.webp'
 import imgDivulgatori2 from '../img/divulgatori/roberto-giacobbo.jpg'
 import imgDivulgatori3 from '../img/divulgatori/ulisse-il-piacere-della-scoperta-alberto-angela-rai1-1.jpg'
-const Sperimento2 = () => {
+const MainHomeSection4 = () => {
 
     return(
         <>
-            <section id = 'section3'>
+            <section id = 'section4'>
                 <p id = 'introDivulgatori'>
                         La storia non sarebbe mai conosciuta se non fosse grazie a chi la divulga,
                         di divulgatori ve ne sono diversi, ognuno con le proprie abilita e competenze!                        
@@ -52,4 +52,4 @@ const Sperimento2 = () => {
     )
 }
 
-export default Sperimento2;
+export default MainHomeSection4;

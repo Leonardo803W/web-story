@@ -20,13 +20,33 @@ const GlobalNavbar = () => {
 
   return (
     <>
-        <section id = "sectiopnNavbar">
+        <section id = "sectionNavbar">
           <div id = "navbar">
-            <Button onClick={handleShow} id = "show-on-mobile">
+            <Button onClic = {handleShow} id = "show-on-mobile">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
               </svg>
             </Button>
+
+          <Offcanvas show={show} onHide={handleClose}>
+            <Offcanvas.Header closeButton id = "offCansHeader">
+              <Offcanvas.Title>Sezioni disponibili:</Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body id = "offCanvsBody">
+                  <p className = "enter">
+                    <Link to = 'SchermataBattaglie'>Battaglie</Link>
+                  </p>
+                  <p className = "notEnter">
+                    <Link to = "#">Invenzioni</Link>
+                  </p>
+                  <p className = "notEnter">
+                    <Link to = "#">Epoche</Link>
+                  </p>
+                  <p className = "notEnter">
+                    <Link to = "#">Continenti</Link>
+                  </p>
+            </Offcanvas.Body>
+          </Offcanvas>
 
             <Link to = {'/'} className = "text-decoration-none">
               <h1 id = "title">Storia sul Web</h1>
@@ -64,26 +84,6 @@ const GlobalNavbar = () => {
             </div>
           </div>
         </section>
-
-      <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton id = "offCansHeader">
-          <Offcanvas.Title>Sezioni disponibili:</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body id = "offCanvsBody">
-              <p className = "enter">
-                <Link to = 'SchermataBattaglie'>Battaglie</Link>
-              </p>
-              <p className = "notEnter">
-                <Link to = "#">Invenzioni</Link>
-              </p>
-              <p className = "notEnter">
-                <Link to = "#">Epoche</Link>
-              </p>
-              <p className = "notEnter">
-                <Link to = "#">Continenti</Link>
-              </p>
-        </Offcanvas.Body>
-      </Offcanvas>
 
     </>
   );
