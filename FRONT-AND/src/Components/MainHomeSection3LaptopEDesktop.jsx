@@ -42,12 +42,14 @@ const MainHomeSection3LaptopEDesktop = () => {
     <>
       <article id = "section3LaptopEDesktop">
         <div className = {isAnyActive ? 'divSection3LaptopEDesktopActive' : 'divSection3LaptopEDesktop'}>
-          <h4>La storia umana puo essere molto di piu di quello che sembra!</h4>
-          <p>
-            Di storie ce ne sono di diverse salse, tra cui Invenzioni, Continenti, Cultura e molto altro,
-            nel mondo ci sono milliardi di umani, ma di storie c'e' ne sono molte di piu,
-            vuoi scoprire quale altre storie e versioni ci sono?
-          </p>
+          <div className=' position-absolute'>
+            <h4>La storia umana puo essere molto di piu di quello che sembra!</h4>
+            <p>
+              Di storie ce ne sono di diverse salse, tra cui Invenzioni, Continenti, Cultura e molto altro,
+              nel mondo ci sono milliardi di umani, ma di storie c'e' ne sono molte di piu,
+              vuoi scoprire quale altre storie e versioni ci sono?
+            </p>
+          </div>
         </div>
 
         <section id = {isAnyActive ? 'multiSezioneLaptopEDesktopActive' : 'multiSezioneLaptopEDesktop'}>

@@ -120,7 +120,7 @@ const MainHomeSection2 = () => {
                                     <p>{card.content}</p>
 
                                         <Link>
-                                            <a href="#" className="HomeAncoreSection2"> scopri </a>
+                                            <p className="HomeAncoreSection2"> scopri </p>
                                         </Link>
                                     </div>
                                 ))}

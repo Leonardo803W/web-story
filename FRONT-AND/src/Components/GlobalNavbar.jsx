@@ -10,8 +10,14 @@ const GlobalNavbar = () => {
   const [showProfile, setShowProfile] = useState(false);
 
   //funzioni
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = () => {
+    //console.log(false)
+    setShow(false);
+  }
+  const handleShow = () => {
+    //console.log(true)
+    setShow(true);
+  }
 
   const handleProfile = () => {
     
@@ -22,13 +28,13 @@ const GlobalNavbar = () => {
     <>
         <section id = "sectionNavbar">
           <div id = "navbar">
-            <Button onClic = {handleShow} id = "show-on-mobile">
+            <Button onClick = {handleShow} id = "show-on-mobile">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
               </svg>
             </Button>
 
-          <Offcanvas show={show} onHide={handleClose}>
+          <Offcanvas show = {show} onHide={handleClose}>
             <Offcanvas.Header closeButton id = "offCansHeader">
               <Offcanvas.Title>Sezioni disponibili:</Offcanvas.Title>
             </Offcanvas.Header>

@@ -6,10 +6,12 @@ const MainHomeSection4 = () => {
     return(
         <>
             <section id = 'section4'>
-                <p id = 'introDivulgatori'>
-                        La storia non sarebbe mai conosciuta se non fosse grazie a chi la divulga,
-                        di divulgatori ve ne sono diversi, ognuno con le proprie abilita e competenze!                        
-                </p>
+                <div className = 'p-3'>
+                    <p id = 'introDivulgatori'>
+                            La storia non sarebbe mai conosciuta se non fosse grazie a chi la divulga,
+                            di divulgatori ve ne sono diversi, ognuno con le proprie abilita e competenze!                        
+                    </p>                    
+                </div>
 
                 <section id = 'groupCardDivulgatori'>
 
@@ -19,30 +21,33 @@ const MainHomeSection4 = () => {
                         <img src = {imgDivulgatori1} alt="" className = 'cardImage'/>
                         <hr className=' m-1 text-light'/>
                         <div className = 'groupContent'>
-                            <h5 className = 'title'>Alessandro Barbero</h5>
-                            <p className = 'description'>Un divulgatore molto noto e altrettanto adorato dai spettatori</p>
-                            <button className = 'cardButton'>scopri di piu</button>
+                            <h5>Alessandro Barbero</h5>
+                            <p>Un divulgatore molto noto e altrettanto adorato dai spettatori</p>
                         </div>
+
+                        <button className = 'cardButton'>scopri di piu</button>
                     </div>
 
                     <div className = "card">
                         <img src = {imgDivulgatori2} alt="" className = 'cardImage'/>
                         <hr className=' m-1 text-light'/>
                         <div className = 'groupContent'>
-                            <h5 className = 'title'>Roberto Giacobbo</h5>
-                            <p className = 'description'>Un divulgatore molto noto e altrettanto adorato dai spettatori</p>
-                            <button className = 'cardButton'>scopri di piu</button>
+                            <h5>Roberto Giacobbo</h5>
+                            <p>Un divulgatore molto noto e altrettanto adorato dai spettatori</p>
                         </div>
+
+                        <button className = 'cardButton'>scopri di piu</button>
                     </div>
 
                     <div className = "card">
                         <img src = {imgDivulgatori3} alt="" className = 'cardImage'/>
                         <hr className=' m-1 text-light'/>
                         <div className = 'groupContent'>
-                            <h5 className = 'title'>Alberto Angela</h5>
-                            <p className = 'description'>Un divulgatore molto noto e altrettanto adorato dai spettatori</p>
-                            <button className = 'cardButton'>scopri di piu</button>
+                            <h5>Alberto Angela</h5>
+                            <p>Un divulgatore molto noto e altrettanto adorato dai spettatori</p>
                         </div>
+
+                        <button className = 'cardButton'>scopri di piu</button>
                     </div>
                 </section>
 

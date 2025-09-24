@@ -43,16 +43,8 @@ const MainHomeSection3TelefonoETablet = () => {
   return (
     <>
       <article id = "Section3TelefonoETablet">
-        <div className = {isAnyActive ? 'divSection3TelefonoETabletActive' : 'divSection3TelefonoETablet'}>
-          <h4 className = {isAnyActive ? 'divSection3TelefonoETabletH4Active' : 'divSection3TelefonoETabletH4'}>La storia umana puo essere molto di piu di quello che sembra!</h4>
-          <p className = {isAnyActive ? 'divSection3TelefonoETabletPActive' : 'divSection3TelefonoETabletP'}>
-            Di storie ce ne sono di diverse salse, tra cui Invenzioni, Continenti, Cultura e molto altro,
-            nel mondo ci sono milliardi di umani, ma di storie c'e' ne sono molte di piu,
-            vuoi scoprire quale altre storie e versioni ci sono?
-          </p>
-        </div>
 
-        <section className = 'w-75'>
+        <section id = {isAnyActive ? 'contenitoreActive' : 'contenitore'}>
           <div className = {animationArticole1 ? 'articoliTelefonoETabletActive' : 'articoliTelefonoETablet'} id = "articoloTelefonoETablet1">
             <div className = {animationArticole1 ? 'articoloIntroTelefonoETabletActive' : 'articoloIntroTelefonoETablet'}>
                 <h5 className = {animationArticole1 ? 'articoloTitleTelefonoETabletActive' : 'articoloTitleTelefonoETablet'}>Invenzioni</h5>
@@ -89,6 +81,16 @@ const MainHomeSection3TelefonoETablet = () => {
             </div>
           </div>
         </section>
+
+                <div className = {isAnyActive ? 'divSection3TelefonoETabletActive' : 'divSection3TelefonoETablet'}>
+          <h4 className = 'divSection3TelefonoETabletH4'>La storia umana puo essere molto di piu di quello che sembra!</h4>
+          <p className = 'divSection3TelefonoETabletP'>
+            Di storie ce ne sono di diverse salse, tra cui Invenzioni, Continenti, Cultura e molto altro,
+            nel mondo ci sono milliardi di umani, ma di storie c'e' ne sono molte di piu,
+            vuoi scoprire quale altre storie e versioni ci sono?
+          </p>
+        </div>
+        
       </article>
     </>
   );
