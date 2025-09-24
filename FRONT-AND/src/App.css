@@ -504,6 +504,7 @@
   background-color: #ffffff96;
   border-radius: 2rem;
   font-size: xx-small;
+  font-weight: 500;
   animation: divSection3TelefonoETabletH4P 3s ease;
 }
 
@@ -711,6 +712,25 @@
     opacity: 1;
     font-size: small;
     width: 80%;
+  }
+}
+
+/*media query per tablet Section3TelefonoETablet*/
+
+@media (min-width: 426px){
+
+  #Section3TelefonoETablet{
+    background-size: 62rem 28rem;
+  }
+
+  .divSection3TelefonoETabletH4{
+    font-size: medium;
+  }
+   
+  .divSection3TelefonoETabletP{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: small;
   }
 }
 
@@ -955,8 +975,8 @@
 
 .cardImage{
   border-radius: 1rem;
-  padding: 1rem;
   background-color: black;
+  height: 10rem;
 }
 
 .groupContent{
@@ -992,6 +1012,8 @@
   border-radius: 2rem;
   border-color: red;
   background-color: #ffffff66;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 #introButtonDivulgatori{
@@ -1051,4 +1073,12 @@
   margin: 1rem;
   border-radius: 5rem;
   text-align: center;
+}
+
+/*media query per tablet Section4*/
+
+@media (min-width: 426px){
+  .card{
+    width: 28%;
+  }
 }
