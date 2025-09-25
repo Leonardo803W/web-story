@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+/*import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 
 import GlobalNavbar from "./GlobalNavbar";
@@ -81,10 +81,9 @@ const ComponenteSingolo = () => {
 
     return(
         <>
-            {/*per tonrare nell'home  
             <Link to = '/'>
                 <button>torna in home</button>
-            </Link>*/}
+            </Link>}
 
             <section className = "groupCapitoliBattle">
                 <div>
@@ -116,13 +115,11 @@ const ComponenteSingolo = () => {
                 </div>
             </section>
 
-
-            {/* 
             <Link to = 'inLavorazione'>
                 <button>per guardare il componente singolo</button>
-            </Link>*/}
+            </Link>}
         </>
     )
 }
 
-export default ComponenteSingolo;
+export default ComponenteSingolo;*/

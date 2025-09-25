@@ -1,4 +1,4 @@
-import GlobalNavbar from "./GlobalNavbar";
+/*import GlobalNavbar from "./GlobalNavbar";
 import ComponenteSingolo from "./ComponenteSingolo";
 
 const SchermataBattaglie = () => {
@@ -12,4 +12,4 @@ const SchermataBattaglie = () => {
     )
 }
 
-export default SchermataBattaglie;
+export default SchermataBattaglie;*/

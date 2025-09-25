@@ -40,7 +40,7 @@ const GlobalNavbar = () => {
             </Offcanvas.Header>
             <Offcanvas.Body id = "offCanvsBody">
                   <p className = "enter">
-                    <Link to = 'SchermataBattaglie'>Battaglie</Link>
+                    <Link to = '#'>Battaglie</Link>
                   </p>
                   <p className = "notEnter">
                     <Link to = "#">Invenzioni</Link>
@@ -60,7 +60,7 @@ const GlobalNavbar = () => {
 
             <div id = "navbar-item-desktop">
               <p className = "enter">
-                <Link to = 'SchermataBattaglie'>Battaglie</Link>
+                <Link to = '#'>Battaglie</Link>
               </p>
               <p className = "notEnter">
                 <Link to = "#">Invenzioni</Link>
