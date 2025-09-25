@@ -53,7 +53,7 @@ const ComponenteSingolo = () => {
                     }
                     const result = await response.json();
                     console.log(result)
-                    setData1(result.result);
+                    setData1(result);
                 } catch (error) {
                     setError(error);
                 } finally {
