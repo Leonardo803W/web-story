@@ -8,12 +8,27 @@ npm install
 
 - poi fare:
 
-
 npm start
 
 - per muoversi:
 
 cd + nome_cartella
+
+- per aggiornare dipendenze prima fare:
+
+npm install -g npm-check-updates
+
+- poi per controllare quali aggiornare
+
+ncu
+
+- per aggiornare quelle trovate fare: 
+
+ncu -u
+
+- e infine per installare le nuove versioni:
+
+npm install
 
 Ricordare!! di eseguire questi comandi all'interno della cartella della applicazione React per installare le librerie nel contesto corretto.
 
