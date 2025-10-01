@@ -43,44 +43,44 @@ const MainHomeSection2 = () => {
 
     //variabili per i caroselli
     const [activeIndex, setActiveIndex] = useState (0)
+    const [activeIndexTablet, setActiveIndexTablet] = useState (0)
     const totalCards = cards.length;
     
     // Per la barra di progresso del primo carosello
-    //const progress = ((activeIndex1 + 1) / totalCards) * 100;
+    const progress = ((activeIndexTablet + 1) / totalCards) * 100;
 
     const handleGiraPagina = () => {
         setAnimateDiv(prev => !prev);
         setAnimateCarosell(prev => !prev);
     };
 
-    /*
-    funzione da sistemare
-    //funzione per avere la card attiva sempre al centro
-    const getVisibleCards = () => {
-        const visibleCards = [];
-        const start = Math.max(0, activeIndex1 - 1);
-        const end = Math.min(totalCards - 1, activeIndex1 + 1);
+    //funzione per avere la card attiva sempre al centro per dispositivi da tablet in su
+
+    const getVisibleCardsForTablet = () => { 
+        const indices = []; 
+        const start = Math.max(0, activeIndexTablet - 1); 
+        const end = Math.min(totalCards - 1, activeIndexTablet + 1); 
         
         for (let i = start; i <= end; i++) 
-        {
-        visibleCards.push(i);
-        }
-        return visibleCards;
-    };
+        { 
+            indices.push(i); 
+        } 
+        return indices; 
+    }; 
+    const visibleIndicesTablet = getVisibleCardsForTablet();
 
-    //funzione per avere la card attiva sempre al centro
-    const visibleIndices = getVisibleCards();
-    */
-
-    const goToNextOrPrev = (n, next) => {
+    //funzione per fermare il carosello o all'inizio o alla fine per telefono
+    const goToNextOrPrev = (next) => {
 
         if(next === 'next')
         {
         setActiveIndex(prev => Math.min(prev + 1, totalCards - 1));
+        setActiveIndexTablet(prev => Math.min(prev + 1, totalCards - 1));
         }
         else
         {
         setActiveIndex(prev => Math.max(prev - 1, 0));
+        setActiveIndexTablet(prev => Math.max(prev - 1, 0));
         }
     };
 
@@ -102,7 +102,7 @@ const MainHomeSection2 = () => {
                         <button id="giraPagina" onClick = {() => handleGiraPagina(1)}>Pagina successiva</button>
                     </div>
 
-                    <div className={animateCarosell ? "carousellVisible" : "d-none"}>
+                    <div className={animateCarosell ? "carousellVisibleTelefono" : "d-none"}>
                             <div className="carousel-wrapper">
 
                             <button className="arrow" onClick = {() => goToNextOrPrev(1)}>&lt;</button>
@@ -131,6 +131,44 @@ const MainHomeSection2 = () => {
 
                         <button id="giraPagina" onClick = {() => handleGiraPagina(1)}>Pagina precedente</button>
                     </div>
+
+                    <div className={animateCarosell ? "carousellVisibleTablet" : "d-none"}>
+                        <div className="carousel-wrapperTablet">
+                            <button className="arrow" onClick={() => goToNextOrPrev()}>&lt;</button>
+                                
+                            <img src = {imgB2} alt = "copertina" />
+
+                            <article className="box">
+                                <div className="card-rowTablet">
+                                    {visibleIndicesTablet.map((idx) => {
+                                    const card = cards[idx];
+                                    return (
+                                        <div
+                                        key={card.id}
+                                        className={`cardCaroselloTablet ${
+                                            idx === activeIndexTablet ? 'activeCardCarosellSection2Tablet' : 'hiddenCardCarosellSection2Tablet'
+                                        }`}
+                                        >
+                                        
+                                        <div className="card-wrapperTablet">
+                                            <h3>{card.title}</h3>
+                                            <p>{card.content}</p>
+                                            <Link to="#">
+                                            <p className="HomeAncoreSection2"> scopri </p>
+                                            </Link>
+                                        </div>
+                                        </div>
+                                    );
+                                    })}
+                                </div>
+                            </article>
+
+                            <button className="arrow" onClick={() => goToNextOrPrev('next')}>&gt;</button>
+                        </div>
+
+                        <button id="giraPagina" onClick={() => handleGiraPagina(1)}>Pagina precedente</button>
+                    </div>
+
                 </div>
             </section>
         </>
