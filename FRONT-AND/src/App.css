@@ -1,7 +1,38 @@
+/*CSS per alert personalizzati*/
+
+#alertBattaglia{
+position: absolute;
+  z-index: 3;
+  left: 5rem;
+  top: 15rem;
+  background-color: #99ffc0bf;
+  border-radius: 1rem;
+  width: 80%;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+#alertBattaglia p{
+  margin: 0;
+  padding: 3rem;
+}
+
+#imgAlertBattaglia1{
+  width: 30%;
+  transform: scaleX(-1);
+}
+
+#imgAlertBattaglia2{
+  width: 30%;
+  transform: scaleX(-1);
+}
+
 /*CSS per GlobalNavbar*/
 
 #sectionNavbar{
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 
 #navbar{
@@ -295,7 +326,7 @@
   background-position-x: -16rem;
 }
 
-#HomeSection2Div{
+#groupSection2{
   padding: 1rem;
   text-align: center;
 }
@@ -304,7 +335,7 @@
   animation: visibleDiv 1s ease-in;
 }
 
-#HomeSection2Paragrafo{
+#introGroupSection2{
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
@@ -315,18 +346,20 @@
   box-shadow: 0px 0px 11px 6px;
 }
 
-.HomeAncoreSection2{
+.allButton{
   display: block;
   border: #ffffff 1px solid;
   padding: 0.5rem;
-  margin: 0.5rem;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
   color: black;
   border-radius: 2rem;
   border-color: red;
   background-color: #dfdfdf8a;
 }
 
-.HomeAncoreSection2:hover{
+.allButton:hover{
   background-color: red;
   box-shadow: 0px 0px 15px 1px;
 }
@@ -337,19 +370,13 @@
   border-radius: 3rem;
   border: unset;
   margin-top: 1rem;
+  animation: giraPagina 2s ease-out;
 }
 
 #giraPagina:hover{
   background-color: red;
   color: white;
   box-shadow: 0px 5px 9px 3px;
-}
-
-.carousel-wrapper {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  overflow: hidden;
 }
 
 .carousellVisibleTelefono{
@@ -361,7 +388,19 @@
   display: none;
 }
 
-.arrow {
+.carousellVisibleLaptop{
+  display: none;
+}
+
+.carouselWrapperTelefono {
+  height: 28rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+}
+
+.allArrow {
   color: #a53737;
   background-color: #ffffff75;
   padding: 0.5rem;
@@ -370,15 +409,18 @@
   border-color: #ff5a5a;
   font-weight: 400;
   margin-top: 12rem;
+  height: 6rem;
+  position: relative;
+  top: 3rem;
 }
 
-.box{
+.allBox{
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.box img{
+#boxTelefonoImg1{
   width: 90%;
   top: 0rem;
   position: absolute;
@@ -389,48 +431,49 @@
   margin: 1rem;
 }
 
-.card-wrapper {
+.allCardWrapper {
   display: flex;
   height: 22rem;
   width: 100%;
   margin-top: 2rem;
 }
 
-.cardCarosello {
+.cardCaroselloTelefono {
   width: 90%;
 }
 
-.cardCarosello h3{
+.allTitleSection2{
   padding: 0.5rem;
   margin: 0.5rem;
   font-size: larger;
 }
 
-.cardCarosello p{
+.allParagrafoSection2{
   padding: 0.5rem;
   margin: 0.5rem;
   font-size: small;
 }
 
-.activeCardCarousellSection2{
-    margin: 1rem;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-top: 6rem;
-    box-shadow: 0px 5px 19px 5px;
-    background-color: #ffffffa3;
-    color: #000000;
-    border-radius: 2rem;
+.activeCardCarousellTelefono{
+  margin: 1rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 6rem;
+  box-shadow: 0px 5px 19px 5px;
+  background-color: #ffffffa3;
+  color: #000000;
+  border-radius: 2rem;
 }
 
-.hiddenCardCarousellSection2 {
-  pointer-events: none;
-  width: 0;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
+.carousel-wrapperTablet {
+  height: 28rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  animation: carousel-wrapperTablet 2s ease-in;
 }
 
 /*animazioni Section2*/
@@ -455,9 +498,34 @@
   }
 }
 
+@keyframes carousel-wrapperTablet {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes giraPagina {
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 /*media query per tablet Section2*/
 
 @media (min-width: 426px){
+
+  #section2{
+    background-size: 80rem 34rem;
+    background-position-x: -9rem;
+  }
 
   .carousellVisibleTelefono{
     display: none;
@@ -468,25 +536,12 @@
     position: relative;
   }
 
-  .card-rowTablet { 
+  .cardRowTablet { 
     position: relative;
     top: 5rem;
     display: flex;
-    gap: 1rem; 
+    gap: 2rem; 
     justify-content: center; 
-  }
-
-  .carousel-wrapperTablet{
-    height: 28rem;
-    width: 97%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    overflow: hidden;
-  }
-  
-  .card-wrapperTablet {
-    margin: 1rem;
   }
 
   .cardCaroselloTablet { 
@@ -505,8 +560,12 @@
     transform: scale(1);
     z-index: 1;
     position: relative;
-    top: -1rem;
-    background-color: #e1e1e1ed;
+    top: 0rem;
+    background-color: #ffffff;
+  }
+
+  .hiddenCardCarosellTablet {
+    opacity: 0.5;
   }
   
   .coverTabletBattle{
@@ -519,6 +578,100 @@
   }
 }
 
+/*media query per laptop Section2*/
+
+@media (min-width: 769px){
+
+  .carousellVisibleTablet{
+    display: none;
+  }
+
+  .carousellVisibleLaptop{
+    display: block;
+  }
+
+  .cardCaroselloLaptop {
+    width: 10%;
+    background-color: white;
+    opacity: 0.5;
+    transform: skew(10deg, 10deg);
+    margin: 1rem;
+    border-radius: 2rem;
+    position: relative;
+    top: -3rem;
+  }
+
+  .laptopTitleSection2 {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: x-small;
+  }
+
+  .laptopParagrafoSection2 {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: x-small;
+  }
+
+  .activeCardCarousellSection2Laptop{
+    opacity: 1;
+    transform: scale(1.2);
+    position: relative;
+    top: -5rem;
+    width: 40%;
+  }
+
+  .activeCardCarousellSection2Laptop h3{
+    font-size: larger;
+  }
+
+  .activeCardCarousellSection2Laptop p{
+    font-size: medium;
+  }
+
+  .carouselWrapperTablet {
+    height: 28rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    animation: carousel-wrapperTablet 2s ease-in;
+  }
+
+  .arrowLaptop {
+    color: #a53737;
+    background-color: #ffffff75;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    border-color: #ff5a5a;
+    font-weight: 400;
+    margin-top: 12rem;
+    height: 6rem;
+    position: relative;
+    top: -2rem;
+  }
+}
+
+/*media query per desktop Section2*/
+
+@media (min-width: 1201px) {
+  #section2 {
+    background-size: 90rem 40rem;
+    background-position-x: 0rem;
+  }
+
+  .activeCardCarousellSection2Laptop {
+    width: 30%;
+  }
+
+  #section4 {
+    background-image: url(http://localhost:3000/static/media/shutterstock_781927855.e6049a9….jpg);
+    background-size: 48rem 18rem;
+    text-align: center;
+    background-position-x: 0rem;
+  }
+}
 /*css Section3TelefonoETablet*/
 
 #Section3TelefonoETablet {
@@ -830,26 +983,50 @@
     align-items: center;
     background-size: cover;
     background-position-y: -11rem;
+    overflow: hidden;
   }
 
   .divSection3LaptopEDesktop{
     width: 50%;
     padding: 1rem;
     animation: divSection3LaptopEDesktop 0.5s ease-out;
+    position: relative;
+    z-index: 0;
+  }
+
+  #divSection3Laptop{
+    position: relative;
+    z-index: 0;
+    left: 0rem;
+    width: 90%;
+    text-align: center;
+  }
+
+  #divSection3LaptopeDesktopIntro{
+    width: 90%;
+    position: relative;
+    z-index: 0;
+    left: 1rem;
+    text-align: center;
   }
 
   .divSection3LaptopEDesktop h4{
     margin-bottom: 3rem;
-    color: white;
+    color: #000000;
     font-size: smaller;
     font-weight: 900;
+    margin: 0;
+    background-color: #ffffffad;
+    border-radius: 2rem;
+    padding: 0.5rem;
   }
 
   .divSection3LaptopEDesktop p{
-    margin: 3rem;
+    margin-top: 3rem;
     padding: 1rem;
     background-color: #ffffff96;
     border-radius: 2rem;
+    color: #000000;
   }
 
   .divSection3LaptopEDesktopActive{
@@ -863,30 +1040,32 @@
     display: flex;
     width: 50%;
     height: 100%;
+    position: relative;
+    z-index: 1;
     transform: skewX(20deg);
     transition: width 1s ease-in;
   }
 
   #multiSezioneLaptopEDesktopActive{
     display: flex;
-    width: 100%;
-    height: 100%;
+    width: 92%;
     transform: skewX(20deg);
     transition: width 1s ease;
   }
 
   .articoliLaptopEDesktop{
-    width: 40%;
+    width: 26%;
     position: relative;
-    left: 4rem;
+    left: 7rem;
     color: white;
     transition: width 0.5s ease-in;
+    font-size: smaller;
   }
 
   .articoloLaptopEDesktopActive{
-    width: 250%;
+    width: 115%;
     position: relative;
-    left: 4rem;
+    left: 7rem;
     color: white;
     transition: width 1s ease-out;
   }
@@ -925,16 +1104,13 @@
   }
 
   .articoloContenutoLaptopEDesktop{
-    margin-top: 1rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    margin-bottom: 2rem;
-    padding: 1rem;
+    margin: 1rem;
+    padding: 0.5rem;
     font-weight: 500;
     background-color: #ffffffad;
     color: black;
     border-radius: 2rem;
-    font-size: small;
+    font-size: smaller;
     height: 10rem;
   }
 
@@ -979,36 +1155,14 @@
 
   @keyframes divSection3LaptopEDesktop {
     0%{
-      width: 0%;
-      padding: 0rem;
-      color: white;
       opacity: 0;
-    }
-    50%{
-      opacity: 0;
+      position: relative;
+      z-index: 0;
     }
     100%{
-      width: 50%;
-      padding: 1rem;
-      color: #36f479;
       opacity: 1;
-    }
-  }
-
-  @keyframes divSection3LaptopEDesktopActive {
-    0%{
-      width: 50%;
-      padding: 1rem;
-      color: #36f479;
-      opacity: 1;
-    }
-    50%{
-      opacity: 0;
-    }
-    100%{
-      width: 0%;
-      padding: 0rem;
-      color: white;
+      position: relative;
+      z-index: 0;
     }
   }
 
@@ -1021,6 +1175,20 @@
   background-position-x: -9rem;
 }
 
+#backgroundImgSection4{
+  display: none;
+}
+
+#groupCardDivulgatoriTelefonoETablet{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#groupCardDivulgatoriLaptopEDesktop{
+  display: none;
+}
+
 #introDivulgatori{
   color: black;
   padding: 0.5rem;
@@ -1029,19 +1197,24 @@
   font-size: small;
   text-align: center;
   margin: 0;
+  box-shadow: 0px 0px 20px 7px;
 }
 
-#groupCardDivulgatori{
+.articleDivulgatori{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  background-color: #9393939c;
+  margin: 1rem;
+  border-radius: 2rem;
+  width: 45%;
+  position: relative;
 }
 
 .card{
   width: 55%;
-  margin: 1rem;
-  box-shadow: 0px 10px 20px 5px;
+  box-shadow: 0px 0px 23px 5px;
   text-align: center;
+  margin: 1rem;
 }
 
 .cardImage{
@@ -1097,7 +1270,50 @@
   background-color: #92e5fd66;
   color: white;
   box-shadow: 0px 1px 12px 5px;
+  position: relative;
 }
+
+.videoDivulgatoriIntro{
+  width: 65%;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 0px 36px 6px;
+}
+
+/*media query per tablet Section4*/
+
+@media (min-width: 426px){
+
+  .card{
+    width: 35%;
+  }
+}
+
+/*media query per laptop Section4*/
+
+@media (min-width: 769px){
+
+  #section4 {
+    background-size: 48rem 18rem;
+    background-position-x: 0rem;
+  }
+  
+  #groupCardDivulgatoriTelefonoETablet{
+    display: none;
+  }
+
+  #groupCardDivulgatoriLaptopEDesktop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #section4{
+    background-size: 44rem 31rem;
+  }
+}
+
 
 /*css per componenti non finiti*/
 /*ComponenteSingolo*/
@@ -1144,12 +1360,4 @@
   margin: 1rem;
   border-radius: 5rem;
   text-align: center;
-}
-
-/*media query per tablet Section4*/
-
-@media (min-width: 426px){
-  .card{
-    width: 28%;
-  }
 }

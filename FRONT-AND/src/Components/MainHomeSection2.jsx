@@ -87,74 +87,75 @@ const MainHomeSection2 = () => {
     return(
         <>
             <section id = "section2">
-                <div id = 'HomeSection2Div'>
+                <section id = 'groupSection2'>
                     <div className={animateDiv ? "divVisible" : "d-none"}>
 
-                        <p id = "HomeSection2Paragrafo">
+                        <p id = "introGroupSection2">
                         La storia dell'uomo è stata impregnata di battaglie ⚔️, spesso anche piccole battaglie possono decidere il destino di un paese. 
                         Ma certe battaglie hanno influenzato profondamente la storia che conosciamo 📜. 
                         Alcune erano prevedibili nella loro direzione, mentre altre non si poteva mai immaginare come sarebbe andata, rendendo difficile anche solo immaginare come sarebbe stata diversa la storia 🌟. 
 
-                            <button className="HomeAncoreSection2">Vuoi scoprire quali di queste battaglie hanno avuto un impatto così grande sulla storia dell'uomo?</button>
+                        <button className = "allButton">Vuoi scoprire quali di queste battaglie hanno avuto un impatto così grande sulla storia dell'uomo?</button>
 
                         </p>
 
-                        <button id="giraPagina" onClick = {() => handleGiraPagina(1)}>Pagina successiva</button>
+                        <button id = "giraPagina" onClick = {() => handleGiraPagina(1)}>Pagina successiva</button>
                     </div>
 
-                    <div className={animateCarosell ? "carousellVisibleTelefono" : "d-none"}>
-                            <div className="carousel-wrapper">
+                    <section className = {animateCarosell ? "carousellVisibleTelefono" : "d-none"}>
+                            <div className = "carouselWrapperTelefono">
 
-                            <button className="arrow" onClick = {() => goToNextOrPrev(1)}>&lt;</button>
+                            <button className = "allArrow" onClick = {() => goToNextOrPrev()}>&lt;</button>
 
-                            <article className = "box">
-                                <img src = {imgB2} alt = "copertina" />
-                                <div className="card-wrapper">
+                            <article className = "allBox">
+                                <img src = {imgB2} alt = "copertina" id = "boxTelefonoImg1"/>
+                                <div className = "allCardWrapper">
+
                                 {cards.map((card, index) => (
                                     <div
                                     key={card.id}
-                                    className={`cardCarosello ${index === activeIndex ? 'activeCardCarousellSection2' : 'hiddenCardCarousellSection2'} `}
+                                    className={`cardCaroselloTelefono ${index === activeIndex ? 'activeCardCarousellTelefono' : 'd-none'} `}
                                     >
-                                    <h3>{card.title}</h3>
-                                    <p>{card.content}</p>
+                                    <h3 className = "allTitleSection2">{card.title}</h3>
+                                    <p className = "allParagrafoSection2">{card.content}</p>
 
                                         <Link>
-                                            <p className="HomeAncoreSection2"> scopri </p>
+                                            <p className="allButton"> scopri </p>
                                         </Link>
                                     </div>
                                 ))}
                                 </div>
                             </article>
 
-                            <button className="arrow" onClick = {() => goToNextOrPrev(1, 'next')}>&gt;</button>
+                            <button className = "allArrow" onClick = {() => goToNextOrPrev('next')}>&gt;</button>
                             </div>
 
-                        <button id="giraPagina" onClick = {() => handleGiraPagina(1)}>Pagina precedente</button>
-                    </div>
+                        <button id = "giraPagina" onClick = {() => handleGiraPagina(1)}>Pagina precedente</button>
+                    </section>
 
-                    <div className={animateCarosell ? "carousellVisibleTablet" : "d-none"}>
+                    <section className={animateCarosell ? "carousellVisibleTablet" : "d-none"}>
                         <div className="carousel-wrapperTablet">
-                            <button className="arrow" onClick={() => goToNextOrPrev()}>&lt;</button>
+                            <button className="allArrow" onClick={() => goToNextOrPrev()}>&lt;</button>
                                 
-                            <img src = {imgB2} alt = "copertina" />
+                            <img src = {imgB2} alt = "copertina" className = "coverTabletBattle"/>
 
-                            <article className="box">
-                                <div className="card-rowTablet">
+                            <article className="allBox">
+                                <div className="cardRowTablet">
                                     {visibleIndicesTablet.map((idx) => {
                                     const card = cards[idx];
                                     return (
                                         <div
                                         key={card.id}
                                         className={`cardCaroselloTablet ${
-                                            idx === activeIndexTablet ? 'activeCardCarosellSection2Tablet' : 'hiddenCardCarosellSection2Tablet'
+                                            idx === activeIndexTablet ? 'activeCardCarosellSection2Tablet' : 'hiddenCardCarosellTablet'
                                         }`}
                                         >
                                         
-                                        <div className="card-wrapperTablet">
-                                            <h3>{card.title}</h3>
-                                            <p>{card.content}</p>
+                                        <div className = "m-3">
+                                        <h3 className = "allTitleSection2">{card.title}</h3>
+                                        <p className = "allParagrafoSection2">{card.content}</p>
                                             <Link to="#">
-                                            <p className="HomeAncoreSection2"> scopri </p>
+                                            <p className="allButton"> scopri </p>
                                             </Link>
                                         </div>
                                         </div>
@@ -163,13 +164,42 @@ const MainHomeSection2 = () => {
                                 </div>
                             </article>
 
-                            <button className="arrow" onClick={() => goToNextOrPrev('next')}>&gt;</button>
+                            <button className="allArrow" onClick={() => goToNextOrPrev('next')}>&gt;</button>
                         </div>
 
                         <button id="giraPagina" onClick={() => handleGiraPagina(1)}>Pagina precedente</button>
-                    </div>
+                    </section>
 
-                </div>
+                    <section className={animateCarosell ? "carousellVisibleLaptop" : "d-none"}>
+                        <div className="carouselWrapperTablet">
+                            <button className="arrowLaptop" onClick={() => goToNextOrPrev()}>&lt;</button>
+                                
+                            <article className="box">
+                                <div className="cardRowTablet">
+                                    {cards.map((card, index) => (
+                                        <div
+                                        key={card.id}
+                                        className={`cardCaroselloLaptop ${index === activeIndex ? 'activeCardCarousellSection2Laptop' : ''} `}
+                                        >
+                                            
+                                            <h3 className = "laptopTitleSection2">{card.title}</h3>
+                                            <p className = "laptopParagrafoSection2">{card.content}</p>
+
+                                            <Link>
+                                                <p className="allButton"> scopri </p>
+                                            </Link>
+                                        </div>
+                                    ))}
+                                </div>
+                            </article>
+
+                            <button className="arrowLaptop" onClick={() => goToNextOrPrev('next')}>&gt;</button>
+                        </div>
+
+                        <button id="giraPagina" onClick={() => handleGiraPagina(1)}>Pagina precedente</button>
+                    </section>
+
+                </section>
             </section>
         </>
     )

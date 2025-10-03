@@ -5,7 +5,6 @@ import MainHomeSection3LaptopEDesktop from "./MainHomeSection3LaptopEDesktop";
 import MainHomeSection3TelefonoETablet from "./MainHomeSection3TelefonoETablet";
 import MainHomeSection4 from "./MainHomeSection4";
 
-
 //schermata principale iniziale
 
 const SchermataHome = () => {
@@ -29,7 +28,6 @@ const SchermataHome = () => {
             </main>
 
             <footer>
-
             </footer>
         </>
     )

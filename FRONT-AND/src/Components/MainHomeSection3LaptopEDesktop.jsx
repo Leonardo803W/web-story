@@ -41,8 +41,8 @@ const MainHomeSection3LaptopEDesktop = () => {
   return (
     <>
       <article id = "section3LaptopEDesktop">
-        <div className = {isAnyActive ? 'divSection3LaptopEDesktopActive' : 'divSection3LaptopEDesktop'}>
-          <div className=' position-absolute'>
+        <div className = {isAnyActive ? 'd-none' : 'divSection3LaptopEDesktop'}>
+          <div id = 'divSection3LaptopeDesktopIntro'>
             <h4>La storia umana puo essere molto di piu di quello che sembra!</h4>
             <p>
               Di storie ce ne sono di diverse salse, tra cui Invenzioni, Continenti, Cultura e molto altro,
@@ -66,8 +66,8 @@ const MainHomeSection3LaptopEDesktop = () => {
             <button onClick={() => handleClickArticole(4)} className = {animationArticole2 ? 'articoloButtonLaptopEDesktopActive' : 'd-none'}>indietro</button>
           </div>
           <div className = {animationArticole3 ? 'articoloLaptopEDesktopActive' : 'articoliLaptopEDesktop'} id = "articoloLaptopEDesktop3">
-            <h5 className = {animationArticole3 ? 'articoloTitleLaptopEDesktopLaptopEDesktopActive' : 'articoloTitle'}>Epoche</h5>
-            <p className = {animationArticole3 ? 'articoloContenutoLaptopEDesktopActive' : 'articoloContenutoLaptopEDesktop'}>Di epoche ne sono passate assai, in cui in ognuna la gente pensava di essere moderna, tu sai quale che epoca siamo in questo momento?</p>
+            <h5 className = {animationArticole3 ? 'articoloTitleLaptopEDesktopActive' : 'articoloTitleLaptopEDesktop'}>Epoche</h5>
+            <p className = {animationArticole3 ? 'articoloContenutoLaptopEDesktopActive' : 'articoloContenutoLaptopEDesktop'}>Fin dagli inzi l'uomo credeva sempre di essere nell'epoca moderna qualunque essa fosse, e adesso che epoca vivi?</p>
             <button onClick={() => handleClickArticole(3)} className = {animationArticole3 ? 'd-none' : 'articoloButtonLaptopEDesktop'}>Dettagli</button>
             <button onClick={() => handleClickArticole(4)} className = {animationArticole3 ? 'articoloButtonLaptopEDesktopActive' : 'd-none'}>indietro</button>
           </div>

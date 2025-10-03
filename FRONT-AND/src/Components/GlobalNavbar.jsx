@@ -3,11 +3,14 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
+import AlertBattaglia from '../Components/AlertBattaglia'
+
 const GlobalNavbar = () => {
     
   //inizializzazione variabili
   const [show, setShow] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
+  const [showAlert1, setShowAlert1] = useState(false)
 
   //funzioni
   const handleClose = () => {
@@ -24,9 +27,26 @@ const GlobalNavbar = () => {
     setShowProfile(prevState => !prevState);
   }
 
+  const handelAlert = (n) => {
+
+    switch(n){
+      case 1:
+        setShowAlert1(true)
+        
+        setTimeout(() => {
+          setShowAlert1(false);
+        }, 10000);
+      break;
+    }
+  }
+
   return (
     <>
         <section id = "sectionNavbar">
+          <div>
+            {showAlert1 ? <AlertBattaglia /> : 'd-none'}
+          </div>
+
           <div id = "navbar">
             <Button onClick = {handleShow} id = "show-on-mobile">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-list" viewBox="0 0 16 16">
@@ -39,7 +59,7 @@ const GlobalNavbar = () => {
               <Offcanvas.Title>Sezioni disponibili:</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body id = "offCanvsBody">
-                  <p className = "enter">
+                  <p className = "enter" onClick = {() => handelAlert(1)}>
                     <Link to = '#'>Battaglie</Link>
                   </p>
                   <p className = "notEnter">
@@ -59,7 +79,7 @@ const GlobalNavbar = () => {
             </Link>
 
             <div id = "navbar-item-desktop">
-              <p className = "enter">
+              <p className = "enter"  onClick = {() => handelAlert(1)}>
                 <Link to = '#'>Battaglie</Link>
               </p>
               <p className = "notEnter">
