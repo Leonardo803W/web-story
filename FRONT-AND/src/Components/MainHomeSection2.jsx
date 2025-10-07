@@ -119,7 +119,7 @@ const MainHomeSection2 = () => {
                                     <h3 className = "allTitleSection2">{card.title}</h3>
                                     <p className = "allParagrafoSection2">{card.content}</p>
 
-                                        <Link>
+                                        <Link className = "text-decoration-none">
                                             <p className="allButton"> scopri </p>
                                         </Link>
                                     </div>

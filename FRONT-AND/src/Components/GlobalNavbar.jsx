@@ -3,14 +3,11 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-import AlertBattaglia from '../Components/AlertBattaglia'
-
-const GlobalNavbar = () => {
+const GlobalNavbar = ({ triggerAlert }) => {
     
   //inizializzazione variabili
   const [show, setShow] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
-  const [showAlert1, setShowAlert1] = useState(false)
 
   //funzioni
   const handleClose = () => {
@@ -28,14 +25,11 @@ const GlobalNavbar = () => {
   }
 
   const handelAlert = (n) => {
-
-    switch(n){
+    setShow(false);
+    
+    switch (n) {
       case 1:
-        setShowAlert1(true)
-        
-        setTimeout(() => {
-          setShowAlert1(false);
-        }, 10000);
+        triggerAlert(); // chiama la funzione passata dal parent
       break;
     }
   }
@@ -43,9 +37,6 @@ const GlobalNavbar = () => {
   return (
     <>
         <section id = "sectionNavbar">
-          <div>
-            {showAlert1 ? <AlertBattaglia /> : 'd-none'}
-          </div>
 
           <div id = "navbar">
             <Button onClick = {handleShow} id = "show-on-mobile">
@@ -54,25 +45,25 @@ const GlobalNavbar = () => {
               </svg>
             </Button>
 
-          <Offcanvas show = {show} onHide={handleClose}>
-            <Offcanvas.Header closeButton id = "offCansHeader">
-              <Offcanvas.Title>Sezioni disponibili:</Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body id = "offCanvsBody">
-                  <p className = "enter" onClick = {() => handelAlert(1)}>
-                    <Link to = '#'>Battaglie</Link>
-                  </p>
-                  <p className = "notEnter">
-                    <Link to = "#">Invenzioni</Link>
-                  </p>
-                  <p className = "notEnter">
-                    <Link to = "#">Epoche</Link>
-                  </p>
-                  <p className = "notEnter">
-                    <Link to = "#">Continenti</Link>
-                  </p>
-            </Offcanvas.Body>
-          </Offcanvas>
+            <Offcanvas show = {show} onHide={handleClose}>
+              <Offcanvas.Header closeButton id = "offCansHeader">
+                <Offcanvas.Title>Sezioni disponibili:</Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body id = "offCanvsBody">
+                    <p className = "enter" onClick = {() => handelAlert(1)}>
+                      <Link to = '#'>Battaglie</Link>
+                    </p>
+                    <p className = "notEnter">
+                      <Link to = "#">Invenzioni</Link>
+                    </p>
+                    <p className = "notEnter">
+                      <Link to = "#">Epoche</Link>
+                    </p>
+                    <p className = "notEnter">
+                      <Link to = "#">Continenti</Link>
+                    </p>
+              </Offcanvas.Body>
+            </Offcanvas>
 
             <Link to = {'/'} className = "text-decoration-none">
               <h1 id = "title">Storia sul Web</h1>
@@ -115,4 +106,4 @@ const GlobalNavbar = () => {
   );
 };
 
-export default GlobalNavbar;     
+export default GlobalNavbar;
