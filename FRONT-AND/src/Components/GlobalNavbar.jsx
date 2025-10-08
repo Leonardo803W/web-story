@@ -74,13 +74,13 @@ const GlobalNavbar = ({ triggerAlert }) => {
                 <Link to = '#'>Battaglie</Link>
               </p>
               <p className = "notEnter">
-                <Link to = "#">Invenzioni</Link>
+                <Link to = "#"  className = "notEnter">Invenzioni</Link>
               </p>
               <p className = "notEnter">
-                <Link to = "#">Epoche</Link>
+                <Link to = "#"  className = "notEnter">Epoche</Link>
               </p>
               <p className = "notEnter">
-                <Link to = "#">Continenti</Link>
+                <Link to = "#"  className = "notEnter">Continenti</Link>
               </p>
             </div>
 

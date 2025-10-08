@@ -65,7 +65,7 @@ const MainHomeSection4 = () => {
                         </div>
                         
                         <iframe
-                            src = "https://www.youtube.com/embed/5bMZYuLm0Tc"
+                            src = "https://www.youtube.com/embed/ugXwgScJS8Y"
                             title = 'video di Alberto Angela'
                             loading = "lazy"          
                             sandbox = "allow-scripts allow-same-origin" 
@@ -87,7 +87,7 @@ const MainHomeSection4 = () => {
                         </div>
                         
                         <iframe
-                            src = "https://www.youtube.com/embed/5bMZYuLm0Tc"
+                            src = "https://www.youtube.com/embed/y6gTYOq1oGU"
                             title = 'video di Alberto Angela'
                             loading = "lazy"          
                             sandbox = "allow-scripts allow-same-origin" 

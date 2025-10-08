@@ -112,18 +112,20 @@
   background: #ffffff99;
   border-color: unset;
   padding: 0.5rem;
+  position: relative;
 }
 
 #profile-items{
   position: absolute;
-  top: 5rem;
-  right: 0rem;
+  top: 3rem;
+  right: -1rem;
   background-color: white;
   z-index: 3;
   border: 1px solid black;
   border-radius: 10px;
   padding: 1rem;
   animation: list 0.1s ease-in-out;
+  cursor: not-allowed;
 }
 
 /*animazioni*/
@@ -733,6 +735,8 @@
   font-size: smaller;
   font-weight: 900;
   animation: divSection3TelefonoETabletH4P 3s ease;
+  background-color: #5a5a5a87;
+  border-radius: 2rem;
 }
 
 .div-main-home-section3 p{
@@ -823,7 +827,8 @@
   margin-right: auto;
   padding: 0.5rem;
   font-size: x-small;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .articolo-contenuto{
@@ -865,7 +870,7 @@
   box-shadow: 0px 2px 21px 3px;
 }
 
-/*animazioni Section3TelefonoETablet*/
+/*animazioni MainHomeSection3*/
 
 @keyframes divSection3TelefonoETablet {
   0%{
@@ -1001,6 +1006,16 @@
     color: #000000;
   }
 
+  .articolo {
+    height: auto;
+    animation: none;
+  }
+
+  .articolo-active{
+    height: auto;
+    animation: none;
+  }
+
   .articolo-intro{
     align-items: center;
     box-shadow: unset;
@@ -1122,6 +1137,16 @@
   }
 }
 
+/*media query per desktop MainHomeSection3*/
+
+@media (min-width: 769px) {
+
+  #Main-home-section3 {
+    background-size: 104rem 45rem;
+    background-position-y: -7rem;
+  }
+}
+
 /*css section4*/
 
 #section4{
@@ -1162,7 +1187,7 @@
   background-color: #9393939c;
   margin: 1rem;
   border-radius: 2rem;
-  width: 45%;
+  width: 80%;
   position: relative;
 }
 
@@ -1230,7 +1255,7 @@
 }
 
 .videoDivulgatoriIntro{
-  width: 65%;
+  width: 100%;
   border-radius: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -1263,6 +1288,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   #section4{
@@ -1270,6 +1297,17 @@
   }
 }
 
+/*media query per desktop Section4*/
+
+@media (min-width: 1441px){
+      #groupCardDivulgatoriLaptopEDesktop{
+    flex-direction: row;
+  }
+  
+  .articleDivulgatori{
+    width: 31%;
+  }
+}
 
 /*css per componenti non finiti*/
 /*ComponenteSingolo*/
